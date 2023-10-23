@@ -6,7 +6,7 @@ Uses a kd-tree to find the k nearest neighbours for each point in a given datase
 }
 \usage{
 nn(data, points = data, k = nrow(data), search = "standard", eps = 0.0, 
-radius = 0.0, trans = TRUE, parallel = FALSE)
+sorted = TRUE, radius = 0.0, trans = TRUE, parallel = FALSE)
 }
 
 \arguments{
@@ -28,8 +28,11 @@ then the value "indices" will contain 0 and nn.dists will contain 1.340781e+154 
 The accuracy of the search. When this is equal to 0, the function will return the exact k 
 neighbours. If higher values are supplied, the function will return k approximate neighbours.
 }
+\item{sorted}{
+Should the distances be sorted? This works only when search = "radius".
+}
 \item{radius}{
-The radius of the search, when search="radius".
+The radius of the search, when search = "radius".
 }
 \item{trans}{
 Should the return matrices be transposed? The default value is TRUE.
@@ -61,5 +64,4 @@ xnew <- as.matrix(iris[141:150, 1:4])
 nn(data = x, points = xnew, k = 10)
 }
 
-\author{Dirk Eddelbuettel}
 
