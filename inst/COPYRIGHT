@@ -2,7 +2,7 @@ This R package is copyright Manos Papadakis 2023, with the exception of file
 inst/include/nanoflann.hpp which is copyright as described below.
 
 --
-Rnanoflann: Approximate Nearest Neighbors
+Rnanoflann: Nearest Neighbors
 Version: 0.0.1
 Release date: 2023/10/24
 ----------------------------------------------------------------------------
