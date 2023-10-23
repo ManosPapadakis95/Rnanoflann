@@ -25,17 +25,17 @@ namespace Rnanoflann {
         }
     }
 
-    inline List knn(arma::mat data, arma::mat points, arma::uword k, const std::string search = "standard", const double eps = 0.0, const bool sorted = false, const double radius = 0.0, const bool parallel = false) {
-        typedef SEXP(*Ptr_knn)(SEXP,SEXP,SEXP,SEXP,SEXP,SEXP,SEXP,SEXP);
-        static Ptr_knn p_knn = NULL;
-        if (p_knn == NULL) {
-            validateSignature("List(*knn)(arma::mat,arma::mat,arma::uword,const std::string,const double,const bool,const double,const bool)");
-            p_knn = (Ptr_knn)R_GetCCallable("Rnanoflann", "_Rnanoflann_knn");
+    inline List nn(arma::mat data, arma::mat points, arma::uword k, const std::string search = "standard", const double eps = 0.0, const bool sorted = false, const double radius = 0.0, const unsigned int leafs = 10, const bool parallel = false, const unsigned int cores = 0) {
+        typedef SEXP(*Ptr_nn)(SEXP,SEXP,SEXP,SEXP,SEXP,SEXP,SEXP,SEXP,SEXP,SEXP);
+        static Ptr_nn p_nn = NULL;
+        if (p_nn == NULL) {
+            validateSignature("List(*nn)(arma::mat,arma::mat,arma::uword,const std::string,const double,const bool,const double,const unsigned int,const bool,const unsigned int)");
+            p_nn = (Ptr_nn)R_GetCCallable("Rnanoflann", "_Rnanoflann_nn");
         }
         RObject rcpp_result_gen;
         {
             RNGScope RCPP_rngScope_gen;
-            rcpp_result_gen = p_knn(Shield<SEXP>(Rcpp::wrap(data)), Shield<SEXP>(Rcpp::wrap(points)), Shield<SEXP>(Rcpp::wrap(k)), Shield<SEXP>(Rcpp::wrap(search)), Shield<SEXP>(Rcpp::wrap(eps)), Shield<SEXP>(Rcpp::wrap(sorted)), Shield<SEXP>(Rcpp::wrap(radius)), Shield<SEXP>(Rcpp::wrap(parallel)));
+            rcpp_result_gen = p_nn(Shield<SEXP>(Rcpp::wrap(data)), Shield<SEXP>(Rcpp::wrap(points)), Shield<SEXP>(Rcpp::wrap(k)), Shield<SEXP>(Rcpp::wrap(search)), Shield<SEXP>(Rcpp::wrap(eps)), Shield<SEXP>(Rcpp::wrap(sorted)), Shield<SEXP>(Rcpp::wrap(radius)), Shield<SEXP>(Rcpp::wrap(leafs)), Shield<SEXP>(Rcpp::wrap(parallel)), Shield<SEXP>(Rcpp::wrap(cores)));
         }
         if (rcpp_result_gen.inherits("interrupted-error"))
             throw Rcpp::internal::InterruptedException();
