@@ -1,11 +1,18 @@
 Package: Rnanoflann
 Type: Package
-Title: What the package does (short line)
-Version: 1.0
-Date: 2023-10-19
-Author: Who wrote it
-Maintainer: Who to complain to <yourfault@somewhere.net>
+Title: Nearest Neighboors
+Version: 0.0.1
+Date: 2023-10-24
+Authors@R: c(
+                person("Manos Papadakis", email = "papadakm95@gmail.com", role = c("aut", "cre", "cph")), 
+                person("Jose Luis Blanco" email = "joseluisblancoc@gmail.com" , role = c("cre","cph"))
+                person("Michail Tsagris", role = c("ctb")), 
+        )
+Maintainer: Manos Papadakis <papadakm95@gmail.com>
+Copyright: nanoflann library is copyright Jose Luis Blanco. See file COPYRIGHT for details.
 Description: More about what it does (maybe more than one line)
-License: What license is it under?
+License: GPL (>= 3)
 Imports: Rcpp (>= 1.0.11)
 LinkingTo: Rcpp, RcppArmadillo
+BugReports: https://github.com/ManosPapadakis95/Rnanoflann/issues
+URL: https://github.com/ManosPapadakis95/Rnanoflann
