@@ -1,6 +1,6 @@
 \name{nn}
 \alias{nn}
-\title{Nearest Neighbour Search}
+\title{k-nearest neighbours search}
 \description{
 Uses a kd-tree to find the k nearest neighbours for each point in a given dataset.
 }
@@ -10,13 +10,14 @@ nn(data, points = data, k = nrow(data), search = "standard", eps = 0.0,
 }
 
 \arguments{
-\item{data}{A numerical matrix. The k nearest points will be extracted from this matrix.
+\item{data}{
+A numerical matrix. The k nearest points will be extracted from this matrix.
 }
 \item{points}{
-A numerical matrix. The function will find the nearest points of each row from this matrix. 
+A numerical matrix. The function will find the nearest neighbours of each row of this matrix. 
 }
 \item{k}{
-The number of neares neibhgours to search for.
+The number of neares neighbours to search for.
 }
 \item{standard}{
 The type of search. Apart from the "standard" there are two more options. The "priority" that 
@@ -37,42 +38,33 @@ neighbours. If higher values are supplied, the function will return k approximat
 The radius of the search, when search="radius".
 }
 \item{trans}{
-
+Should the return matrices be transposed? The default value is TRUE.
 }
 \item{parallel}{
 Should the computations take place in parallel? The default value is FALSE.
 }
 }
 
-
 \value{
-  \code{rcpparma_hello_world()} does not return a value, but displays a
-  message to the console.
-
-  \code{rcpparma_outerproduct()} returns a numeric matrix computed as the
-  outer (vector) product of \code{x}.
-
-  \code{rcpparma_innerproduct()} returns a double computer as the inner
-  (vector) product of \code{x}.
-
-  \code{rcpparma_bothproducts()} returns a list with both the outer and
-  inner products.
-  
+\code{indices}{
+A matrix with the indices of each nearest neighbour for each of the rows of the matrix "points".
 }
-\details{
-  These are example functions which should be largely
-  self-explanatory. Their main benefit is to demonstrate how to write a
-  function using the Armadillo C++ classes, and to have to such a
-  function accessible from R.
+\item{distances}{
+A matrix with the Euclidean distances between each nearest neighbour and each of the rows of the matrix "points".
 }
-\references{
-  See the documentation for Armadillo, and RcppArmadillo, for more details.
 }
+
+%\details{
+%}
+
+%\references{
+%See the documentation for Armadillo, and RcppArmadillo, for more details.
+%}
 
 \examples{
-  x <- sqrt(1:4)
-  rcpparma_innerproduct(x)
-  rcpparma_outerproduct(x)
+x <- as.matrix(iris[1:140, 1:4])
+xnew <- as.matrix(iris[141:150, 1:4])
+nn(data = x, points = xnew, k = 10)
 }
 
 \author{Dirk Eddelbuettel}
