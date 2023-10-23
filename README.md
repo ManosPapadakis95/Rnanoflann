@@ -11,8 +11,11 @@ You can use the exported `Rnanoflann::nn` function or directly *nanoflan* via *L
 
 ## 3. Rnanoflann
 *Rnanoflann* export the function `nn` that performs nearest neighbors search with options:
- > a. parallel - uses omp library to perform parallel search for each point.
- > b. cores - the cores that omp will use.
- > c. search - the supported types are `standard` and `radius`.
- > d. eps - Error bound
- > e. k - The maximum number of nearest neighbours to compute. The default value is set to the number of rows in data
+
+*  *data* - An `M x d` `matrix` where each of the M rows is a point.
+*  *points* - An `N x d` `matrix` that will be queried against data. d, the number of columns, must be the same as data. If missing, defaults to data.
+*  *parallel* - uses omp library to perform parallel search for each point. Default is `FALSE`
+*  *cores* - the cores that omp will use. Default is zero and it means to automaticaly compute the numbers of threads.
+*  *search* - the supported types are `standard` and `radius`.
+*  *eps* - Error bound. Default is `0.0`.
+*  *k* - The maximum number of nearest neighbours to compute. The default value is set to the number of rows in data
