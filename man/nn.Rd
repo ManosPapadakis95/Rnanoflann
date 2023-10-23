@@ -1,8 +1,8 @@
-\name{RcppArmadillo-Functions}
+\name{nn}
 \alias{nn}
-\title{Set of functions in example RcppArmadillo package}
+\title{Nearest Neighbour Search}
 \description{
-
+Uses a kd-tree to find the k nearest neighbours for each point in a given dataset.
 }
 \usage{
 nn(data, points = data, k = nrow(data), search = "standard", eps = 0.0, 
@@ -10,7 +10,38 @@ nn(data, points = data, k = nrow(data), search = "standard", eps = 0.0,
 }
 
 \arguments{
-  \item{x}{a numeric vector}
+\item{data}{A numerical matrix. The k nearest points will be extracted from this matrix.
+}
+\item{points}{
+A numerical matrix. The function will find the nearest points of each row from this matrix. 
+}
+\item{k}{
+The number of neares neibhgours to search for.
+}
+\item{standard}{
+The type of search. Apart from the "standard" there are two more options. The "priority" that 
+visits cells in increasing order of distance from the query point, and hence, should converge 
+more rapidly on the true nearest neighbour, but standard is usually faster for exact searches. 
+The "radius" searches only for neighbours within a specified radius of the point. If there 
+are no neighbours then the value "indices" will contain 0 and nn.dists will contain 
+1.340781e+154 for that point.
+}
+\item{eps}{
+The accuracy of the search. When this is equal to 0, the function will return the exact k 
+neighbours. If higher values are supplied, the function will return k approximate neighbours.
+}
+\item{sorted}{
+
+}
+\item{radius}{
+The radius of the search, when search="radius".
+}
+\item{trans}{
+
+}
+\item{parallel}{
+Should the computations take place in parallel? The default value is FALSE.
+}
 }
 
 
