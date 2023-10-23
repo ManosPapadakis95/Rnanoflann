@@ -1,0 +1,34 @@
+<span> <h1>Rnanoflann</h1> <p>![Rnanoflann](https://raw.githubusercontent.com/jlblancoc/nanoflann/master/doc/logo.png)</p> </span>
+Nearest Neighboors
+
+---
+title: "Custom Title and Something Else"
+output: html_document
+---
+
+<style>
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  flex: 1;
+  font-size: 24px;
+}
+
+.something-else {
+  flex: 1;
+  text-align: right;
+}
+</style>
+
+<div class="row">
+  <div class="title">
+    # Rnanoflann
+  </div>
+  <div class="something-else">
+    ![Rnanoflann](https://raw.githubusercontent.com/jlblancoc/nanoflann/master/doc/logo.png)
+  </div>
+</div>
