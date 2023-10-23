@@ -14,9 +14,9 @@ Rcpp::Rostream<true>&  Rcpp::Rcout = Rcpp::Rcpp_cout_get();
 Rcpp::Rostream<false>& Rcpp::Rcerr = Rcpp::Rcpp_cerr_get();
 #endif
 
-// knn
-List knn(arma::mat data, arma::mat points, arma::uword k, const std::string search, const double eps, const bool sorted, const double radius, const bool parallel);
-static SEXP _Rnanoflann_knn_try(SEXP dataSEXP, SEXP pointsSEXP, SEXP kSEXP, SEXP searchSEXP, SEXP epsSEXP, SEXP sortedSEXP, SEXP radiusSEXP, SEXP parallelSEXP) {
+// nn
+List nn(arma::mat data, arma::mat points, arma::uword k, const std::string search, const double eps, const bool sorted, const double radius, const unsigned int leafs, const bool parallel, const unsigned int cores);
+static SEXP _Rnanoflann_nn_try(SEXP dataSEXP, SEXP pointsSEXP, SEXP kSEXP, SEXP searchSEXP, SEXP epsSEXP, SEXP sortedSEXP, SEXP radiusSEXP, SEXP leafsSEXP, SEXP parallelSEXP, SEXP coresSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::traits::input_parameter< arma::mat >::type data(dataSEXP);
@@ -26,16 +26,18 @@ BEGIN_RCPP
     Rcpp::traits::input_parameter< const double >::type eps(epsSEXP);
     Rcpp::traits::input_parameter< const bool >::type sorted(sortedSEXP);
     Rcpp::traits::input_parameter< const double >::type radius(radiusSEXP);
+    Rcpp::traits::input_parameter< const unsigned int >::type leafs(leafsSEXP);
     Rcpp::traits::input_parameter< const bool >::type parallel(parallelSEXP);
-    rcpp_result_gen = Rcpp::wrap(knn(data, points, k, search, eps, sorted, radius, parallel));
+    Rcpp::traits::input_parameter< const unsigned int >::type cores(coresSEXP);
+    rcpp_result_gen = Rcpp::wrap(nn(data, points, k, search, eps, sorted, radius, leafs, parallel, cores));
     return rcpp_result_gen;
 END_RCPP_RETURN_ERROR
 }
-RcppExport SEXP _Rnanoflann_knn(SEXP dataSEXP, SEXP pointsSEXP, SEXP kSEXP, SEXP searchSEXP, SEXP epsSEXP, SEXP sortedSEXP, SEXP radiusSEXP, SEXP parallelSEXP) {
+RcppExport SEXP _Rnanoflann_nn(SEXP dataSEXP, SEXP pointsSEXP, SEXP kSEXP, SEXP searchSEXP, SEXP epsSEXP, SEXP sortedSEXP, SEXP radiusSEXP, SEXP leafsSEXP, SEXP parallelSEXP, SEXP coresSEXP) {
     SEXP rcpp_result_gen;
     {
         Rcpp::RNGScope rcpp_rngScope_gen;
-        rcpp_result_gen = PROTECT(_Rnanoflann_knn_try(dataSEXP, pointsSEXP, kSEXP, searchSEXP, epsSEXP, sortedSEXP, radiusSEXP, parallelSEXP));
+        rcpp_result_gen = PROTECT(_Rnanoflann_nn_try(dataSEXP, pointsSEXP, kSEXP, searchSEXP, epsSEXP, sortedSEXP, radiusSEXP, leafsSEXP, parallelSEXP, coresSEXP));
     }
     Rboolean rcpp_isInterrupt_gen = Rf_inherits(rcpp_result_gen, "interrupted-error");
     if (rcpp_isInterrupt_gen) {
@@ -60,20 +62,20 @@ RcppExport SEXP _Rnanoflann_knn(SEXP dataSEXP, SEXP pointsSEXP, SEXP kSEXP, SEXP
 static int _Rnanoflann_RcppExport_validate(const char* sig) { 
     static std::set<std::string> signatures;
     if (signatures.empty()) {
-        signatures.insert("List(*knn)(arma::mat,arma::mat,arma::uword,const std::string,const double,const bool,const double,const bool)");
+        signatures.insert("List(*nn)(arma::mat,arma::mat,arma::uword,const std::string,const double,const bool,const double,const unsigned int,const bool,const unsigned int)");
     }
     return signatures.find(sig) != signatures.end();
 }
 
 // registerCCallable (register entry points for exported C++ functions)
 RcppExport SEXP _Rnanoflann_RcppExport_registerCCallable() { 
-    R_RegisterCCallable("Rnanoflann", "_Rnanoflann_knn", (DL_FUNC)_Rnanoflann_knn_try);
+    R_RegisterCCallable("Rnanoflann", "_Rnanoflann_nn", (DL_FUNC)_Rnanoflann_nn_try);
     R_RegisterCCallable("Rnanoflann", "_Rnanoflann_RcppExport_validate", (DL_FUNC)_Rnanoflann_RcppExport_validate);
     return R_NilValue;
 }
 
 static const R_CallMethodDef CallEntries[] = {
-    {"_Rnanoflann_knn", (DL_FUNC) &_Rnanoflann_knn, 8},
+    {"_Rnanoflann_nn", (DL_FUNC) &_Rnanoflann_nn, 10},
     {"_Rnanoflann_RcppExport_registerCCallable", (DL_FUNC) &_Rnanoflann_RcppExport_registerCCallable, 0},
     {NULL, NULL, 0}
 };
