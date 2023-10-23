@@ -1,23 +1,19 @@
 \name{RcppArmadillo-Functions}
-\alias{rcpparma_hello_world}
-\alias{rcpparma_innerproduct}
-\alias{rcpparma_outerproduct}
-\alias{rcpparma_bothproducts}
+\alias{nn}
 \title{Set of functions in example RcppArmadillo package}
 \description{
-  These four functions are created when
-  \code{RcppArmadillo.package.skeleton()} is invoked to create a
-  skeleton packages.
+
 }
 \usage{
-rcpparma_hello_world()
-rcpparma_outerproduct(x)
-rcpparma_innerproduct(x)
-rcpparma_bothproducts(x)
+nn(data, points = data, k = nrow(data), search = "standard", eps = 0.0, 
+                sorted = FALSE, radius = 0.0, trans = TRUE, parallel = FALSE)
 }
+
 \arguments{
   \item{x}{a numeric vector}
 }
+
+
 \value{
   \code{rcpparma_hello_world()} does not return a value, but displays a
   message to the console.
@@ -41,10 +37,12 @@ rcpparma_bothproducts(x)
 \references{
   See the documentation for Armadillo, and RcppArmadillo, for more details.
 }
+
 \examples{
   x <- sqrt(1:4)
   rcpparma_innerproduct(x)
   rcpparma_outerproduct(x)
 }
+
 \author{Dirk Eddelbuettel}
 
