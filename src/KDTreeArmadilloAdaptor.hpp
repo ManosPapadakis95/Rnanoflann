@@ -24,7 +24,7 @@ struct KDTreeArmadilloAdaptor
     
     const std::reference_wrapper<const MatrixType> m_data_matrix;
     
-    explicit KDTreeArmadilloAdaptor(const uword dimensionality, const std::reference_wrapper<const MatrixType>& mat)
+    explicit KDTreeArmadilloAdaptor(const uword dimensionality, const std::reference_wrapper<const MatrixType>& mat,const uword leafs = 10)
         : m_data_matrix(mat)
     {
         const auto dims = mat.get().n_rows; // Assumes column-major Armadillo matrix
@@ -32,7 +32,7 @@ struct KDTreeArmadilloAdaptor
             throw std::runtime_error("Error: 'dimensionality' must match the column count in the data matrix");
         if (DIM > 0 && static_cast<int>(dims) != DIM)
             throw std::runtime_error("Data set dimensionality does not match the 'DIM' template argument");
-        index_ = new index_t(dims, *this /* adaptor */, nanoflann::KDTreeSingleIndexAdaptorParams(100));
+        index_ = new index_t(dims, *this /* adaptor */, nanoflann::KDTreeSingleIndexAdaptorParams(leafs));
         index_->buildIndex();
     }
     
