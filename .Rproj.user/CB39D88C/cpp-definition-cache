@@ -1,0 +1,450 @@
+[
+    {
+        "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/Rnanoflann.h",
+        "file_last_write": 1697798801.0,
+        "definitions": [
+            {
+                "usr": "c:Rnanoflann.h@172@macro@RCPP_Rnanoflann_H_GEN_",
+                "kind": 9,
+                "parent_name": "",
+                "name": "RCPP_Rnanoflann_H_GEN_",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/Rnanoflann.h",
+                "line": 5,
+                "column": 9,
+                "hidden": true
+            }
+        ],
+        "hidden": true
+    },
+    {
+        "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/nanoflann.hpp",
+        "file_last_write": 1697794721.0,
+        "definitions": [
+            {
+                "usr": "c:nanoflann.hpp@2635@macro@NANOFLANN_VERSION",
+                "kind": 9,
+                "parent_name": "",
+                "name": "NANOFLANN_VERSION",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/nanoflann.hpp",
+                "line": 65,
+                "column": 9,
+                "hidden": false
+            },
+            {
+                "usr": "c:nanoflann.hpp@2845@macro@NOMINMAX",
+                "kind": 9,
+                "parent_name": "",
+                "name": "NOMINMAX",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/nanoflann.hpp",
+                "line": 70,
+                "column": 9,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@nanoflann@ST>2#T#T@has_resize",
+                "kind": 2,
+                "parent_name": "",
+                "name": "has_resize<T, typename>",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/nanoflann.hpp",
+                "line": 98,
+                "column": 8,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@nanoflann@ST>2#T#T@has_assign",
+                "kind": 2,
+                "parent_name": "",
+                "name": "has_assign<T, typename>",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/nanoflann.hpp",
+                "line": 109,
+                "column": 8,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@nanoflann@S@IndexDist_Sorter",
+                "kind": 3,
+                "parent_name": "",
+                "name": "IndexDist_Sorter",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/nanoflann.hpp",
+                "line": 242,
+                "column": 8,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@nanoflann@ST>2#T#T@ResultItem",
+                "kind": 2,
+                "parent_name": "",
+                "name": "ResultItem<IndexType, DistanceType>",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/nanoflann.hpp",
+                "line": 261,
+                "column": 8,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@nanoflann@ST>2#T#T@RadiusResultSet",
+                "kind": 2,
+                "parent_name": "",
+                "name": "RadiusResultSet<_DistanceType, _IndexType>",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/nanoflann.hpp",
+                "line": 277,
+                "column": 7,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@nanoflann@S@Metric",
+                "kind": 3,
+                "parent_name": "",
+                "name": "Metric",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/nanoflann.hpp",
+                "line": 370,
+                "column": 8,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@nanoflann@ST>4#T#T#T#T@L1_Adaptor",
+                "kind": 2,
+                "parent_name": "",
+                "name": "L1_Adaptor<T, DataSource, _DistanceType, IndexType>",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/nanoflann.hpp",
+                "line": 387,
+                "column": 8,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@nanoflann@ST>4#T#T#T#T@L2_Adaptor",
+                "kind": 2,
+                "parent_name": "",
+                "name": "L2_Adaptor<T, DataSource, _DistanceType, IndexType>",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/nanoflann.hpp",
+                "line": 449,
+                "column": 8,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@nanoflann@ST>4#T#T#T#T@L2_Simple_Adaptor",
+                "kind": 2,
+                "parent_name": "",
+                "name": "L2_Simple_Adaptor<T, DataSource, _DistanceType, IndexType>",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/nanoflann.hpp",
+                "line": 514,
+                "column": 8,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@nanoflann@ST>4#T#T#T#T@SO2_Adaptor",
+                "kind": 2,
+                "parent_name": "",
+                "name": "SO2_Adaptor<T, DataSource, _DistanceType, IndexType>",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/nanoflann.hpp",
+                "line": 559,
+                "column": 8,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@nanoflann@ST>4#T#T#T#T@SO3_Adaptor",
+                "kind": 2,
+                "parent_name": "",
+                "name": "SO3_Adaptor<T, DataSource, _DistanceType, IndexType>",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/nanoflann.hpp",
+                "line": 604,
+                "column": 8,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@nanoflann@S@metric_L1",
+                "kind": 3,
+                "parent_name": "",
+                "name": "metric_L1",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/nanoflann.hpp",
+                "line": 631,
+                "column": 8,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@nanoflann@S@metric_L1@ST>3#T#T#T@traits",
+                "kind": 2,
+                "parent_name": "",
+                "name": "traits<T, DataSource, IndexType>",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/nanoflann.hpp",
+                "line": 634,
+                "column": 12,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@nanoflann@S@metric_L2",
+                "kind": 3,
+                "parent_name": "",
+                "name": "metric_L2",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/nanoflann.hpp",
+                "line": 641,
+                "column": 8,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@nanoflann@S@metric_L2@ST>3#T#T#T@traits",
+                "kind": 2,
+                "parent_name": "",
+                "name": "traits<T, DataSource, IndexType>",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/nanoflann.hpp",
+                "line": 644,
+                "column": 12,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@nanoflann@S@metric_L2_Simple",
+                "kind": 3,
+                "parent_name": "",
+                "name": "metric_L2_Simple",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/nanoflann.hpp",
+                "line": 651,
+                "column": 8,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@nanoflann@S@metric_L2_Simple@ST>3#T#T#T@traits",
+                "kind": 2,
+                "parent_name": "",
+                "name": "traits<T, DataSource, IndexType>",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/nanoflann.hpp",
+                "line": 654,
+                "column": 12,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@nanoflann@S@metric_SO2",
+                "kind": 3,
+                "parent_name": "",
+                "name": "metric_SO2",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/nanoflann.hpp",
+                "line": 660,
+                "column": 8,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@nanoflann@S@metric_SO2@ST>3#T#T#T@traits",
+                "kind": 2,
+                "parent_name": "",
+                "name": "traits<T, DataSource, IndexType>",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/nanoflann.hpp",
+                "line": 663,
+                "column": 12,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@nanoflann@S@metric_SO3",
+                "kind": 3,
+                "parent_name": "",
+                "name": "metric_SO3",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/nanoflann.hpp",
+                "line": 669,
+                "column": 8,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@nanoflann@S@metric_SO3@ST>3#T#T#T@traits",
+                "kind": 2,
+                "parent_name": "",
+                "name": "traits<T, DataSource, IndexType>",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/nanoflann.hpp",
+                "line": 672,
+                "column": 12,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@nanoflann@E@KDTreeSingleIndexAdaptorFlags",
+                "kind": 4,
+                "parent_name": "",
+                "name": "KDTreeSingleIndexAdaptorFlags",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/nanoflann.hpp",
+                "line": 683,
+                "column": 12,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@nanoflann@E@KDTreeSingleIndexAdaptorFlags@None",
+                "kind": 5,
+                "parent_name": "",
+                "name": "None",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/nanoflann.hpp",
+                "line": 685,
+                "column": 5,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@nanoflann@E@KDTreeSingleIndexAdaptorFlags@SkipInitialBuildIndex",
+                "kind": 5,
+                "parent_name": "",
+                "name": "SkipInitialBuildIndex",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/nanoflann.hpp",
+                "line": 686,
+                "column": 5,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@nanoflann@S@SearchParameters",
+                "kind": 3,
+                "parent_name": "",
+                "name": "SearchParameters",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/nanoflann.hpp",
+                "line": 717,
+                "column": 8,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@nanoflann@S@PooledAllocator",
+                "kind": 2,
+                "parent_name": "",
+                "name": "PooledAllocator",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/nanoflann.hpp",
+                "line": 747,
+                "column": 7,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@nanoflann@S@PooledAllocator@F@internal_init#",
+                "kind": 7,
+                "parent_name": "PooledAllocator",
+                "name": "internal_init",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/nanoflann.hpp",
+                "line": 766,
+                "column": 10,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@nanoflann@S@PooledAllocator@F@free_all#",
+                "kind": 7,
+                "parent_name": "PooledAllocator",
+                "name": "free_all",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/nanoflann.hpp",
+                "line": 789,
+                "column": 10,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@nanoflann@S@PooledAllocator@F@malloc#1k#",
+                "kind": 7,
+                "parent_name": "PooledAllocator",
+                "name": "malloc(const size_t)",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/nanoflann.hpp",
+                "line": 805,
+                "column": 11,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@nanoflann@ST>2#NI#T@array_or_vector",
+                "kind": 2,
+                "parent_name": "",
+                "name": "array_or_vector<DIM, T>",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/nanoflann.hpp",
+                "line": 877,
+                "column": 8,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@nanoflann@ST>5#T#T#T#NI#T@KDTreeBaseClass",
+                "kind": 2,
+                "parent_name": "",
+                "name": "KDTreeBaseClass<Derived, Distance, DatasetAdaptor, DIM, IndexType>",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/nanoflann.hpp",
+                "line": 907,
+                "column": 7,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@nanoflann@ST>5#T#T#T#NI#T@KDTreeBaseClass@S@Node",
+                "kind": 3,
+                "parent_name": "",
+                "name": "Node",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/nanoflann.hpp",
+                "line": 934,
+                "column": 12,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@nanoflann@ST>5#T#T#T#NI#T@KDTreeBaseClass@S@Interval",
+                "kind": 3,
+                "parent_name": "",
+                "name": "Interval",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/nanoflann.hpp",
+                "line": 959,
+                "column": 12,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@nanoflann@ST>4#T#T#NI#T@KDTreeSingleIndexAdaptor",
+                "kind": 2,
+                "parent_name": "",
+                "name": "KDTreeSingleIndexAdaptor<Distance, DatasetAdaptor, DIM, IndexType>",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/nanoflann.hpp",
+                "line": 1432,
+                "column": 7,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@nanoflann@ST>4#T#T#NI#T@KDTreeSingleIndexDynamicAdaptor_",
+                "kind": 2,
+                "parent_name": "",
+                "name": "KDTreeSingleIndexDynamicAdaptor_<Distance, DatasetAdaptor, DIM, IndexType>",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/nanoflann.hpp",
+                "line": 1897,
+                "column": 7,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@nanoflann@ST>4#T#T#NI#T@KDTreeSingleIndexDynamicAdaptor",
+                "kind": 2,
+                "parent_name": "",
+                "name": "KDTreeSingleIndexDynamicAdaptor<Distance, DatasetAdaptor, DIM, IndexType>",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/nanoflann.hpp",
+                "line": 2287,
+                "column": 7,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@nanoflann@ST>4#T#NI#T#Nb@KDTreeEigenMatrixAdaptor",
+                "kind": 2,
+                "parent_name": "",
+                "name": "KDTreeEigenMatrixAdaptor<MatrixType, DIM, Distance, row_major>",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/nanoflann.hpp",
+                "line": 2502,
+                "column": 8,
+                "hidden": false
+            }
+        ],
+        "hidden": false
+    },
+    {
+        "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/src/KDTreeArmadilloAdaptor.hpp",
+        "file_last_write": 1697722976.0,
+        "definitions": [
+            {
+                "usr": "c:@ST>2#T#NI@KDTreeArmadilloAdaptor",
+                "kind": 3,
+                "parent_name": "",
+                "name": "KDTreeArmadilloAdaptor",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/src/KDTreeArmadilloAdaptor.hpp",
+                "line": 12,
+                "column": 8,
+                "hidden": false
+            }
+        ],
+        "hidden": false
+    },
+    {
+        "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/src/knn.cpp",
+        "file_last_write": 1697803718.0,
+        "definitions": [
+            {
+                "usr": "c:@F@knn#$@N@arma@S@Mat>#d#S0_#I#1I#1d#1b#1d#1b#",
+                "kind": 6,
+                "parent_name": "",
+                "name": "knn(arma::mat, arma::mat, arma::uword, const int, const double, const bool, const double, const bool)",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/src/knn.cpp",
+                "line": 13,
+                "column": 6,
+                "hidden": false
+            }
+        ],
+        "hidden": false
+    }
+]

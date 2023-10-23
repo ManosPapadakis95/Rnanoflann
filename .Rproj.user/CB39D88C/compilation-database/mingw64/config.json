@@ -1,0 +1,21 @@
+{
+    "args": [
+        "-std=gnu++17",
+        "-IC:/R/R-4.3.1/include",
+        "-DNDEBUG",
+        "-IC:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include",
+        "-fopenmp",
+        "-IC:/R/R-4.3.1/library/Rcpp/include",
+        "-IC:/R/R-4.3.1/library/RcppArmadillo/include",
+        "-DEIGEN_DONT_VECTORIZE",
+        "-nostdinc",
+        "-include",
+        "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/.Rproj.user/CB39D88C/compilation-database/mingw64/cpp-definitions.h"
+    ],
+    "pch": "RcppArmadillo",
+    "is_cpp": true,
+    "hash": "169772132916977215341697721592",
+    "compiler": "6762244524107556826",
+    "rversion": "4.3.1",
+    "dbversion": 4
+}
