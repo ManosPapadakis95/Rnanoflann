@@ -6,7 +6,7 @@ Uses a kd-tree to find the k nearest neighbours for each point in a given datase
 }
 \usage{
 nn(data, points = data, k = nrow(data), search = "standard", eps = 0.0, 
-                sorted = FALSE, radius = 0.0, trans = TRUE, parallel = FALSE)
+radius = 0.0, trans = TRUE, parallel = FALSE)
 }
 
 \arguments{
@@ -20,19 +20,13 @@ A numerical matrix. The function will find the nearest neighbours of each row of
 The number of neares neighbours to search for.
 }
 \item{standard}{
-The type of search. Apart from the "standard" there are two more options. The "priority" that 
-visits cells in increasing order of distance from the query point, and hence, should converge 
-more rapidly on the true nearest neighbour, but standard is usually faster for exact searches. 
-The "radius" searches only for neighbours within a specified radius of the point. If there 
-are no neighbours then the value "indices" will contain 0 and nn.dists will contain 
-1.340781e+154 for that point.
+The type of search. Apart from the "standard" there is the "radius" option. It searches 
+only for neighbours within a specified radius of the point. If there are no neighbours 
+then the value "indices" will contain 0 and nn.dists will contain 1.340781e+154 for that point.
 }
 \item{eps}{
 The accuracy of the search. When this is equal to 0, the function will return the exact k 
 neighbours. If higher values are supplied, the function will return k approximate neighbours.
-}
-\item{sorted}{
-
 }
 \item{radius}{
 The radius of the search, when search="radius".
