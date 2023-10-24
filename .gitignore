@@ -4,3 +4,4 @@
 src/Rnanoflann.dll
 .o
 *.dll
+*.o
