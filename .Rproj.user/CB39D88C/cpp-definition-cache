@@ -432,15 +432,15 @@
     },
     {
         "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/src/knn.cpp",
-        "file_last_write": 1698072146.0,
+        "file_last_write": 1698146358.0,
         "definitions": [
             {
-                "usr": "c:@F@nn#$@N@arma@S@Mat>#d#S0_#I#1I#1d#1b#1d#1i#1b#1i#",
+                "usr": "c:@F@nn#$@N@arma@S@Mat>#d#S0_#I#1I#1I#1d#1b#1d#1b#1i#",
                 "kind": 6,
                 "parent_name": "",
-                "name": "nn(arma::mat, arma::mat, arma::uword, const int, const double, const bool, const double, const unsigned int, const bool, const unsigned int)",
+                "name": "nn(arma::mat, arma::mat, arma::uword, const int, const int, const double, const bool, const double, const bool, const unsigned int)",
                 "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/src/knn.cpp",
-                "line": 13,
+                "line": 39,
                 "column": 6,
                 "hidden": false
             }
