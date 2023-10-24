@@ -3,3 +3,4 @@
 .Rhistory
 src/Rnanoflann.dll
 .o
+*.dll
