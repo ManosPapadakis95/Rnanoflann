@@ -32,6 +32,10 @@ then the value "indices" will contain 0 and distances will contain 1.340781e+154
 The accuracy of the search. When this is equal to 0, the function will return the exact k 
 neighbours. If higher values are supplied, the function will return k approximate neighbours.
 }
+\item{square}{
+If you choose "euclidean" as the method, then you can have the option to return the 
+squared Euclidean distances by setting this argument to TRUE. Default is FALSE.
+}
 \item{sorted}{
 Should the distances be sorted? This works only when search = "radius".
 }
