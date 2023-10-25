@@ -3,7 +3,7 @@
     "path": "~/GitHub/Rnanoflann/NAMESPACE",
     "project_path": "NAMESPACE",
     "type": "r_namespace",
-    "hash": "2134295244",
+    "hash": "0",
     "contents": "",
     "dirty": false,
     "created": 1697721748429.0,
@@ -11,14 +11,16 @@
     "relative_order": 2,
     "properties": {
         "source_window_id": "",
-        "Source": "Source"
+        "Source": "Source",
+        "cursorPosition": "2,10",
+        "scrollLine": "0"
     },
     "folds": "",
-    "lastKnownWriteTime": 1697721329,
+    "lastKnownWriteTime": 1698229077,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1697721329,
+    "last_content_update": 1698229077257,
     "read_only": false,
     "read_only_alternatives": []
 }

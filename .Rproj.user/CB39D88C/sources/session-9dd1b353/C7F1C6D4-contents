@@ -11,7 +11,7 @@ sorted = TRUE, radius = 0.0, trans = TRUE, parallel = FALSE, cores = 0)
 
 \arguments{
 \item{data}{
-A numerical matrix. The k nearest points will be extracted from this matrix.
+A numerical matrix. The k nearesta points will be extracted from this matrix.
 }
 \item{points}{
 A numerical matrix. The function will find the nearest neighbours of each row of this matrix. 
@@ -49,7 +49,7 @@ Number of threads for parallel version. The default is 0 which means all the ava
     A list with 2 fields.
 	\itemize{
 		\item \bold{inds}: A matrix with the indices of each nearest neighbour for each of the rows of the matrix "points".
-		\item \bold{inds}: A matrix with the Euclidean distances between each nearest neighbour and each of the rows of the matrix "points".
+		\item \bold{dists}: A matrix with the distances between each nearest neighbour and each of the rows of the matrix "points".
 	}
 }
 

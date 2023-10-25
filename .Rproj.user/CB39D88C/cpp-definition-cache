@@ -1,22 +1,5 @@
 [
     {
-        "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/Rnanoflann.h",
-        "file_last_write": 1698070227.0,
-        "definitions": [
-            {
-                "usr": "c:Rnanoflann.h@172@macro@RCPP_Rnanoflann_H_GEN_",
-                "kind": 9,
-                "parent_name": "",
-                "name": "RCPP_Rnanoflann_H_GEN_",
-                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/Rnanoflann.h",
-                "line": 5,
-                "column": 9,
-                "hidden": true
-            }
-        ],
-        "hidden": true
-    },
-    {
         "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/nanoflann.hpp",
         "file_last_write": 1697794721.0,
         "definitions": [
@@ -415,10 +398,10 @@
     },
     {
         "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/src/KDTreeArmadilloAdaptor.hpp",
-        "file_last_write": 1698071851.0,
+        "file_last_write": 1698227301.0,
         "definitions": [
             {
-                "usr": "c:@ST>2#T#NI@KDTreeArmadilloAdaptor",
+                "usr": "c:@ST>3#T#T#NI@KDTreeArmadilloAdaptor",
                 "kind": 3,
                 "parent_name": "",
                 "name": "KDTreeArmadilloAdaptor",
@@ -426,19 +409,66 @@
                 "line": 12,
                 "column": 8,
                 "hidden": false
+            },
+            {
+                "usr": "c:@ST>4#T#T#Nb#NI@KDTreeArmadilloAdaptor2",
+                "kind": 3,
+                "parent_name": "",
+                "name": "KDTreeArmadilloAdaptor2",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/src/KDTreeArmadilloAdaptor.hpp",
+                "line": 63,
+                "column": 8,
+                "hidden": false
+            }
+        ],
+        "hidden": false
+    },
+    {
+        "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/src/dists.hpp",
+        "file_last_write": 1698228187.0,
+        "definitions": [
+            {
+                "usr": "c:@ST>5#T#T#Nb#T#T@euclidean_adaptor",
+                "kind": 2,
+                "parent_name": "",
+                "name": "euclidean_adaptor<T, DataSource, Square, _DistanceType, IndexType>",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/src/dists.hpp",
+                "line": 20,
+                "column": 8,
+                "hidden": false
+            },
+            {
+                "usr": "c:@S@euclidean",
+                "kind": 3,
+                "parent_name": "",
+                "name": "euclidean",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/src/dists.hpp",
+                "line": 56,
+                "column": 8,
+                "hidden": false
+            },
+            {
+                "usr": "c:@S@euclidean@ST>4#T#T#Nb#T@traits",
+                "kind": 2,
+                "parent_name": "",
+                "name": "traits<T, DataSource, Square, IndexType>",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/src/dists.hpp",
+                "line": 59,
+                "column": 12,
+                "hidden": false
             }
         ],
         "hidden": false
     },
     {
         "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/src/knn.cpp",
-        "file_last_write": 1698146358.0,
+        "file_last_write": 1698229094.0,
         "definitions": [
             {
-                "usr": "c:@F@nn#$@N@arma@S@Mat>#d#S0_#I#1I#1I#1d#1b#1d#1b#1i#",
+                "usr": "c:@F@nn#$@N@arma@S@Mat>#d#S0_#I#1I#1I#1d#1b#1b#1d#1i#1b#1i#",
                 "kind": 6,
                 "parent_name": "",
-                "name": "nn(arma::mat, arma::mat, arma::uword, const int, const int, const double, const bool, const double, const bool, const unsigned int)",
+                "name": "nn(arma::mat, arma::mat, arma::uword, const int, const int, const double, const bool, const bool, const double, const unsigned int, const bool, const unsigned int)",
                 "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/src/knn.cpp",
                 "line": 39,
                 "column": 6,
