@@ -1,3 +1,4 @@
+%[dont read]
 \name{Rnanoflann-package}
 \alias{Rnanoflann-package}
 \alias{Rnanoflann}
