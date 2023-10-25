@@ -9,26 +9,15 @@
 \packageDescription{Rnanoflann}
 }
 \details{
+The package offers a function to find the k nearest neighbours for every point in a given dataset using 
+Jose Luis' nanoflann library. There is support for exact searches, fixed radius searches with 'kd' trees 
+and currently it supports only two distances: the 'Euclidean' and 'Manhattan'. 
+Also, the nanoflann library is exported and ready ot use via the LinkingTo mehcanism.
 
-The DESCRIPTION file:
-\packageDESCRIPTION{Rnanoflann}
-\packageIndices{Rnanoflann}
-~~ An overview of how to use the package, including the most important functions ~~
 }
 \author{
 \packageAuthor{Rnanoflann}
 
 Maintainer: \packageMaintainer{Rnanoflann}
 }
-\references{
-~~ Literature or other references for background information ~~
-}
-~~ Optionally other standard keywords, one per line, from file KEYWORDS in the R documentation directory ~~
-\keyword{ package }
-\seealso{
-~~ Optional links to other man pages, e.g. ~~
-~~ \code{\link[<pkg>:<pkg>-package]{<pkg>}} ~~
-}
-\examples{
-~~ simple examples of the most important functions ~~
-}
+
