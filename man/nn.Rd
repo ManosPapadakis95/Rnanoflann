@@ -42,7 +42,12 @@ The radius of the search, when search = "radius".
 Should the return matrices be transposed? The default value is TRUE.
 }
 \item{leafs}{
+Number of divided points. Default is 10.
 
+\itemize{
+    \item Large values mean that the tree will be built faster (since the tree will be smaller), but each query will be slower (since the linear search in the leaf is to be done over more points).
+    \item Small values will build the tree much slower (there will be many tree nodes), but queries will be faster... up to some point, since the "tree-part" of the search (logarithmic complexity) still has a significant cost.
+}
 }
 \item{parallel}{
 Should the computations take place in parallel? The default value is FALSE.
