@@ -827,8 +827,7 @@ class PooledAllocator
             void* m = ::malloc(blocksize);
             if (!m)
             {
-                fprintf(stderr, "Failed to allocate memory.\n");
-                throw std::bad_alloc();
+                Rcpp::stop("Failed to allocate memory.\n");
             }
 
             /* Fill first word of new block with pointer to previous block. */
@@ -1516,12 +1515,10 @@ class KDTreeSingleIndexAdaptor
         const Dimension                       dimensionality,
         const KDTreeSingleIndexAdaptorParams& params)
     {
-        // Rcpp::Rcout<<__LINE__<<std::endl;
     Base::size_                = dataset_.kdtree_get_point_count();
         Base::size_at_index_build_ = Base::size_;
         Base::dim_                 = dimensionality;
         if (DIM > 0) Base::dim_ = DIM;
-        // Rcpp::Rcout<<__LINE__<<std::endl;
     Base::leaf_max_size_ = params.leaf_max_size;
         if (params.n_thread_build > 0)
         {
@@ -1537,7 +1534,6 @@ class KDTreeSingleIndexAdaptor
               KDTreeSingleIndexAdaptorFlags::SkipInitialBuildIndex))
         {
             // Build KD-tree:
-        // Rcpp::Rcout<<__LINE__<<std::endl;
             buildIndex();
         }
     }
@@ -1548,19 +1544,13 @@ class KDTreeSingleIndexAdaptor
      */
     void buildIndex()
     {
-        // Rcpp::Rcout<<__LINE__<<std::endl;
         Base::size_                = dataset_.kdtree_get_point_count();
-        // Rcpp::Rcout<<__LINE__<<std::endl;
         Base::size_at_index_build_ = Base::size_;
         init_vind();
-        // Rcpp::Rcout<<__LINE__<<std::endl;
         this->freeIndex(*this);
-        // Rcpp::Rcout<<__LINE__<<std::endl;
         Base::size_at_index_build_ = Base::size_;
         if (Base::size_ == 0) return;
-        // Rcpp::Rcout<<__LINE__<<std::endl;
         computeBoundingBox(Base::root_bbox_);
-        // Rcpp::Rcout<<__LINE__<<std::endl;
         // construct the tree
         if (Base::n_thread_build_ == 1)
         {
@@ -1706,47 +1696,34 @@ class KDTreeSingleIndexAdaptor
 
     void computeBoundingBox(BoundingBox& bbox)
     {
-        // Rcpp::Rcout<<__LINE__<<std::endl;
         const auto dims = (DIM > 0 ? DIM : Base::dim_);
-        // Rcpp::Rcout<<__LINE__<<std::endl;
         resize(bbox, dims);
-        // Rcpp::Rcout<<__LINE__<<std::endl;
         if (dataset_.kdtree_get_bbox(bbox))
         {
-        // Rcpp::Rcout<<__LINE__<<std::endl;
             // Done! It was implemented in derived class
         }
         else
         {
-        // Rcpp::Rcout<<__LINE__<<std::endl;
             const Size N = dataset_.kdtree_get_point_count();
-        // Rcpp::Rcout<<__LINE__<<std::endl;
             if (!N)
                 throw std::runtime_error(
                     "[nanoflann] computeBoundingBox() called but "
                     "no data points found.");
-        // Rcpp::Rcout<<__LINE__<<std::endl;
             for (Dimension i = 0; i < dims; ++i)
             {
                 bbox[i].low = bbox[i].high =
                     this->dataset_get(*this, Base::vAcc_[0], i);
             }
-        // Rcpp::Rcout<<__LINE__<<std::endl;
             for (Offset k = 1; k < N; ++k)
             {
-        // Rcpp::Rcout<<__LINE__<<std::endl;
                 for (Dimension i = 0; i < dims; ++i)
                 {
-        // Rcpp::Rcout<<__LINE__<<std::endl;
                     const auto val =
                         this->dataset_get(*this, Base::vAcc_[k], i);
-        // Rcpp::Rcout<<__LINE__<<std::endl;
                     if (val < bbox[i].low) bbox[i].low = val;
                     if (val > bbox[i].high) bbox[i].high = val;
                 }
-        // Rcpp::Rcout<<__LINE__<<std::endl;
             }
-        // Rcpp::Rcout<<__LINE__<<std::endl;
         }
     }
 
