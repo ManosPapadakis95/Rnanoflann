@@ -5,19 +5,23 @@
 Uses a kd-tree to find the k nearest neighbours for each point in a given dataset.
 }
 \usage{
-nn(data, points = data, k = nrow(data), search = "standard", eps = 0.0, 
-sorted = TRUE, radius = 0.0, trans = TRUE, parallel = FALSE, cores = 0)
+nn(data, points = data, k = nrow(data), method = "euclidean", search = "standard", 
+eps = 0.0, square = FALSE, sorted = FALSE, radius = 0.0, trans = TRUE, leafs = 10, 
+parallel = FALSE, cores = 0)
 }
 
 \arguments{
 \item{data}{
-A numerical matrix. The k nearesta points will be extracted from this matrix.
+A numerical matrix. The k nearest points will be extracted from this matrix.
 }
 \item{points}{
 A numerical matrix. The function will find the nearest neighbours of each row of this matrix. 
 }
 \item{k}{
 The number of neares neighbours to search for.
+}
+\item{method}{
+The type of distance. Currently two distances are supported, the "euclidean" and "manhattan".
 }
 \item{search}{
 The type of search. Apart from the "standard" there is the "radius" option. It searches 
@@ -36,6 +40,9 @@ The radius of the search, when search = "radius".
 }
 \item{trans}{
 Should the return matrices be transposed? The default value is TRUE.
+}
+\item{leafs}{
+
 }
 \item{parallel}{
 Should the computations take place in parallel? The default value is FALSE.
