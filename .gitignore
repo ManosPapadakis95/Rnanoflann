@@ -5,3 +5,5 @@ src/Rnanoflann.dll
 .o
 *.dll
 *.o
+*.RData
+*.Rhistory
