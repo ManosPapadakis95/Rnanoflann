@@ -48,10 +48,12 @@ Should the return matrices be transposed? The default value is TRUE.
 \item{leafs}{
 Number of divided points. Default is 10.
 
-\itemize{
-    \item Large values mean that the tree will be built faster (since the tree will be smaller), but each query will be slower (since the linear search in the leaf is to be done over more points).
-    \item Small values will build the tree much slower (there will be many tree nodes), but queries will be faster... up to some point, since the "tree-part" of the search (logarithmic complexity) still has a significant cost.
-}
+Large values mean that the tree will be built faster (since the tree will be smaller), 
+but each query will be slower (since the linear search in the leaf is to be done over more points).
+
+Small values will build the tree much slower (there will be many tree nodes), but queries 
+will be faster... up to some point, since the "tree-part" of the search (logarithmic complexity) 
+still has a significant cost.
 }
 \item{parallel}{
 Should the computations take place in parallel? The default value is FALSE.
@@ -62,11 +64,13 @@ Number of threads for parallel version. The default is 0 which means all the ava
 }
 
 \value{
-    A list with 2 fields.
-	\itemize{
-		\item \bold{inds}: A matrix with the indices of each nearest neighbour for each of the rows of the matrix "points".
-		\item \bold{dists}: A matrix with the distances between each nearest neighbour and each of the rows of the matrix "points".
-	}
+A list with 2 fields.
+\item{inds}{
+A matrix with the indices of each nearest neighbour for each of the rows of the matrix "points".
+}
+\item{dists}{
+A matrix with the distances between each nearest neighbour and each of the rows of the matrix "points".
+}
 }
 
 \examples{
