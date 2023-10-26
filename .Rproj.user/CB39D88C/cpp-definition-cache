@@ -1,7 +1,77 @@
 [
     {
+        "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/Rnanoflann.h",
+        "file_last_write": 1698312978.0,
+        "definitions": [],
+        "hidden": false
+    },
+    {
+        "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/internal/KDTreeArmadilloAdaptor.hpp",
+        "file_last_write": 1698312938.0,
+        "definitions": [
+            {
+                "usr": "c:@N@Rnanoflann@ST>3#T#T#NI@KDTreeArmadilloAdaptor",
+                "kind": 2,
+                "parent_name": "",
+                "name": "KDTreeArmadilloAdaptor<MatrixType, Distance, DIM>",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/internal/KDTreeArmadilloAdaptor.hpp",
+                "line": 13,
+                "column": 12,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@Rnanoflann@ST>4#T#T#Nb#NI@KDTreeArmadilloAdaptor2",
+                "kind": 2,
+                "parent_name": "",
+                "name": "KDTreeArmadilloAdaptor2<MatrixType, Distance, Square, DIM>",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/internal/KDTreeArmadilloAdaptor.hpp",
+                "line": 64,
+                "column": 12,
+                "hidden": false
+            }
+        ],
+        "hidden": false
+    },
+    {
+        "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/internal/dists.hpp",
+        "file_last_write": 1698312945.0,
+        "definitions": [
+            {
+                "usr": "c:@N@Rnanoflann@ST>5#T#T#Nb#T#T@euclidean_adaptor",
+                "kind": 2,
+                "parent_name": "",
+                "name": "euclidean_adaptor<T, DataSource, Square, _DistanceType, IndexType>",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/internal/dists.hpp",
+                "line": 11,
+                "column": 12,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@Rnanoflann@S@euclidean",
+                "kind": 3,
+                "parent_name": "",
+                "name": "euclidean",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/internal/dists.hpp",
+                "line": 47,
+                "column": 12,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@Rnanoflann@S@euclidean@ST>4#T#T#Nb#T@traits",
+                "kind": 2,
+                "parent_name": "",
+                "name": "traits<T, DataSource, Square, IndexType>",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/internal/dists.hpp",
+                "line": 50,
+                "column": 16,
+                "hidden": false
+            }
+        ],
+        "hidden": false
+    },
+    {
         "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/nanoflann.hpp",
-        "file_last_write": 1697794721.0,
+        "file_last_write": 1698249711.0,
         "definitions": [
             {
                 "usr": "c:nanoflann.hpp@2635@macro@NANOFLANN_VERSION",
@@ -319,7 +389,7 @@
                 "parent_name": "",
                 "name": "array_or_vector<DIM, T>",
                 "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/nanoflann.hpp",
-                "line": 877,
+                "line": 876,
                 "column": 8,
                 "hidden": false
             },
@@ -329,7 +399,7 @@
                 "parent_name": "",
                 "name": "KDTreeBaseClass<Derived, Distance, DatasetAdaptor, DIM, IndexType>",
                 "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/nanoflann.hpp",
-                "line": 907,
+                "line": 906,
                 "column": 7,
                 "hidden": false
             },
@@ -339,7 +409,7 @@
                 "parent_name": "",
                 "name": "Node",
                 "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/nanoflann.hpp",
-                "line": 934,
+                "line": 933,
                 "column": 12,
                 "hidden": false
             },
@@ -349,7 +419,7 @@
                 "parent_name": "",
                 "name": "Interval",
                 "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/nanoflann.hpp",
-                "line": 959,
+                "line": 958,
                 "column": 12,
                 "hidden": false
             },
@@ -359,7 +429,7 @@
                 "parent_name": "",
                 "name": "KDTreeSingleIndexAdaptor<Distance, DatasetAdaptor, DIM, IndexType>",
                 "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/nanoflann.hpp",
-                "line": 1432,
+                "line": 1431,
                 "column": 7,
                 "hidden": false
             },
@@ -369,7 +439,7 @@
                 "parent_name": "",
                 "name": "KDTreeSingleIndexDynamicAdaptor_<Distance, DatasetAdaptor, DIM, IndexType>",
                 "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/nanoflann.hpp",
-                "line": 1897,
+                "line": 1874,
                 "column": 7,
                 "hidden": false
             },
@@ -379,7 +449,7 @@
                 "parent_name": "",
                 "name": "KDTreeSingleIndexDynamicAdaptor<Distance, DatasetAdaptor, DIM, IndexType>",
                 "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/nanoflann.hpp",
-                "line": 2287,
+                "line": 2264,
                 "column": 7,
                 "hidden": false
             },
@@ -389,72 +459,8 @@
                 "parent_name": "",
                 "name": "KDTreeEigenMatrixAdaptor<MatrixType, DIM, Distance, row_major>",
                 "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/nanoflann.hpp",
-                "line": 2502,
+                "line": 2479,
                 "column": 8,
-                "hidden": false
-            }
-        ],
-        "hidden": false
-    },
-    {
-        "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/src/KDTreeArmadilloAdaptor.hpp",
-        "file_last_write": 1698227301.0,
-        "definitions": [
-            {
-                "usr": "c:@ST>3#T#T#NI@KDTreeArmadilloAdaptor",
-                "kind": 3,
-                "parent_name": "",
-                "name": "KDTreeArmadilloAdaptor",
-                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/src/KDTreeArmadilloAdaptor.hpp",
-                "line": 12,
-                "column": 8,
-                "hidden": false
-            },
-            {
-                "usr": "c:@ST>4#T#T#Nb#NI@KDTreeArmadilloAdaptor2",
-                "kind": 3,
-                "parent_name": "",
-                "name": "KDTreeArmadilloAdaptor2",
-                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/src/KDTreeArmadilloAdaptor.hpp",
-                "line": 63,
-                "column": 8,
-                "hidden": false
-            }
-        ],
-        "hidden": false
-    },
-    {
-        "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/src/dists.hpp",
-        "file_last_write": 1698228187.0,
-        "definitions": [
-            {
-                "usr": "c:@ST>5#T#T#Nb#T#T@euclidean_adaptor",
-                "kind": 2,
-                "parent_name": "",
-                "name": "euclidean_adaptor<T, DataSource, Square, _DistanceType, IndexType>",
-                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/src/dists.hpp",
-                "line": 20,
-                "column": 8,
-                "hidden": false
-            },
-            {
-                "usr": "c:@S@euclidean",
-                "kind": 3,
-                "parent_name": "",
-                "name": "euclidean",
-                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/src/dists.hpp",
-                "line": 56,
-                "column": 8,
-                "hidden": false
-            },
-            {
-                "usr": "c:@S@euclidean@ST>4#T#T#Nb#T@traits",
-                "kind": 2,
-                "parent_name": "",
-                "name": "traits<T, DataSource, Square, IndexType>",
-                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/src/dists.hpp",
-                "line": 59,
-                "column": 12,
                 "hidden": false
             }
         ],
@@ -462,7 +468,7 @@
     },
     {
         "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/src/knn.cpp",
-        "file_last_write": 1698229094.0,
+        "file_last_write": 1698313134.0,
         "definitions": [
             {
                 "usr": "c:@F@nn#$@N@arma@S@Mat>#d#S0_#I#1I#1I#1d#1b#1b#1d#1i#1b#1i#",
@@ -470,7 +476,7 @@
                 "parent_name": "",
                 "name": "nn(arma::mat, arma::mat, arma::uword, const int, const int, const double, const bool, const bool, const double, const unsigned int, const bool, const unsigned int)",
                 "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/src/knn.cpp",
-                "line": 39,
+                "line": 46,
                 "column": 6,
                 "hidden": false
             }
