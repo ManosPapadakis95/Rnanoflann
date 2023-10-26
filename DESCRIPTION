@@ -10,7 +10,7 @@ Authors@R: c(
         )
 Maintainer: Manos Papadakis <papadakm95@gmail.com>
 Copyright: nanoflann library is copyright Jose Luis Blanco. See file COPYRIGHT for details.
-Description: Finds the k nearest neighbours for every point in a given dataset using Jose Luis' nanoflann library. There is support for exact searches, fixed radius searches with 'kd' trees and two distances, the 'Euclidean' and 'Manhattan'. Also, the nanoflann library is exported and ready to be used via the linking to mechanism.
+Description: Finds the k nearest neighbours for every point in a given dataset using Jose Luis' nanoflann library. There is support for exact searches, fixed radius searches with 'kd' trees and two distances, the 'Euclidean' and 'Manhattan'. For more information see <https://github.com/jlblancoc/nanoflann>. Also, the nanoflann library is exported and ready to be used via the linking to mechanism.
 License: GPL (>= 3)
 Imports: Rcpp (>= 1.0.11)
 LinkingTo: Rcpp, RcppArmadillo
