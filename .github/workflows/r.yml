@@ -35,5 +35,4 @@ jobs:
       - name: Install dependencies
         run: |
           install.packages("Rfast")
-          remotes::install_deps(dependencies = TRUE)
         shell: Rscript {0}
