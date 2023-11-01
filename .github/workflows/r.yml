@@ -25,23 +25,23 @@ jobs:
         r-version: ['3.6.3', '4.1.1']
 
     steps:
-  - uses: actions/checkout@v2
+      - uses: actions/checkout@v2
 
-  - name: Set up R ${{ matrix.r-version }}
-    uses: r-lib/actions/setup-r@v1
-    with:
-      r-version: ${{ matrix.r-version }}
-      path: R
+      - name: Set up R ${{ matrix.r-version }}
+        uses: r-lib/actions/setup-r@v1
+        with:
+          r-version: ${{ matrix.r-version }}
+          path: R
 
-  - name: Add R to PATH
-    run: echo "$R_HOME/bin" >> $GITHUB_PATH
+      - name: Add R to PATH
+        run: echo "$R_HOME/bin" >> $GITHUB_PATH
 
-  - name: Install dependencies
-    run: |
-      R -e 'install.packages(c("remotes", "rcmdcheck"))'
-      R -e 'remotes::install_deps(dependencies = TRUE)'
-    shell: bash
+      - name: Install dependencies
+        run: |
+          R -e 'install.packages(c("remotes", "rcmdcheck"))'
+          R -e 'remotes::install_deps(dependencies = TRUE)'
+        shell: bash
 
-  - name: Check
-    run: R -e 'rcmdcheck::rcmdcheck(args = "--no-manual", error_on = "error")'
+      - name: Check
+        run: R -e 'rcmdcheck::rcmdcheck(args = "--no-manual", error_on = "error")'
 
