@@ -39,6 +39,5 @@ jobs:
       - name: Install dependencies
         run: |
           R -e 'install.packages(c("Rnanoflann"))'
-          R -e 'remotes::install_deps(dependencies = TRUE)'
         shell: bash
 
