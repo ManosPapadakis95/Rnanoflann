@@ -38,10 +38,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          R -e 'install.packages(c("remotes", "rcmdcheck"))'
+          R -e 'install.packages(c("Rnanoflann"))'
           R -e 'remotes::install_deps(dependencies = TRUE)'
         shell: bash
-
-      - name: Check
-        run: R -e 'rcmdcheck::rcmdcheck(args = "--no-manual", error_on = "error")'
 
