@@ -7,39 +7,45 @@
 using namespace Rcpp;
 
 #ifdef RCPP_USE_GLOBAL_ROSTREAM
-Rcpp::Rostream<true>&  Rcpp::Rcout = Rcpp::Rcpp_cout_get();
-Rcpp::Rostream<false>& Rcpp::Rcerr = Rcpp::Rcpp_cerr_get();
+Rcpp::Rostream<true> &Rcpp::Rcout = Rcpp::Rcpp_cout_get();
+Rcpp::Rostream<false> &Rcpp::Rcerr = Rcpp::Rcpp_cerr_get();
 #endif
 
 // nn
-List nn(arma::mat data, arma::mat points, arma::uword k, const std::string method, const std::string search, const double eps, const bool square, const bool sorted, const double radius, const unsigned int leafs, const bool parallel, const unsigned int cores);
-RcppExport SEXP _Rnanoflann_nn(SEXP dataSEXP, SEXP pointsSEXP, SEXP kSEXP, SEXP methodSEXP, SEXP searchSEXP, SEXP epsSEXP, SEXP squareSEXP, SEXP sortedSEXP, SEXP radiusSEXP, SEXP leafsSEXP, SEXP parallelSEXP, SEXP coresSEXP) {
-BEGIN_RCPP
+List nn(arma::mat data, arma::mat points, arma::uword k, const std::string method = "euclidean",
+        const std::string search = "standard", const double eps = 0.0, const bool square = false,
+        const bool sorted = false, const double radius = 0.0, const unsigned int leafs = 10, const double p = 0.0,
+        const bool parallel = false, const unsigned int cores = 0);
+RcppExport SEXP _Rnanoflann_nn(SEXP dataSEXP, SEXP pointsSEXP, SEXP kSEXP, SEXP methodSEXP, SEXP searchSEXP, SEXP epsSEXP,
+                               SEXP squareSEXP, SEXP sortedSEXP, SEXP radiusSEXP, SEXP leafsSEXP, SEXP pSEXP, SEXP parallelSEXP, SEXP coresSEXP)
+{
+    BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< arma::mat >::type data(dataSEXP);
-    Rcpp::traits::input_parameter< arma::mat >::type points(pointsSEXP);
-    Rcpp::traits::input_parameter< arma::uword >::type k(kSEXP);
-    Rcpp::traits::input_parameter< const std::string >::type method(methodSEXP);
-    Rcpp::traits::input_parameter< const std::string >::type search(searchSEXP);
-    Rcpp::traits::input_parameter< const double >::type eps(epsSEXP);
-    Rcpp::traits::input_parameter< const bool >::type square(squareSEXP);
-    Rcpp::traits::input_parameter< const bool >::type sorted(sortedSEXP);
-    Rcpp::traits::input_parameter< const double >::type radius(radiusSEXP);
-    Rcpp::traits::input_parameter< const unsigned int >::type leafs(leafsSEXP);
-    Rcpp::traits::input_parameter< const bool >::type parallel(parallelSEXP);
-    Rcpp::traits::input_parameter< const unsigned int >::type cores(coresSEXP);
-    rcpp_result_gen = Rcpp::wrap(nn(data, points, k, method, search, eps, square, sorted, radius, leafs, parallel, cores));
+    Rcpp::traits::input_parameter<arma::mat>::type data(dataSEXP);
+    Rcpp::traits::input_parameter<arma::mat>::type points(pointsSEXP);
+    Rcpp::traits::input_parameter<arma::uword>::type k(kSEXP);
+    Rcpp::traits::input_parameter<const std::string>::type method(methodSEXP);
+    Rcpp::traits::input_parameter<const std::string>::type search(searchSEXP);
+    Rcpp::traits::input_parameter<const double>::type eps(epsSEXP);
+    Rcpp::traits::input_parameter<const bool>::type square(squareSEXP);
+    Rcpp::traits::input_parameter<const bool>::type sorted(sortedSEXP);
+    Rcpp::traits::input_parameter<const double>::type radius(radiusSEXP);
+    Rcpp::traits::input_parameter<const double>::type p(pSEXP);
+    Rcpp::traits::input_parameter<const unsigned int>::type leafs(leafsSEXP);
+    Rcpp::traits::input_parameter<const bool>::type parallel(parallelSEXP);
+    Rcpp::traits::input_parameter<const unsigned int>::type cores(coresSEXP);
+    rcpp_result_gen = Rcpp::wrap(nn(data, points, k, method, search, eps, square, sorted, radius, leafs, p, parallel, cores));
     return rcpp_result_gen;
-END_RCPP
+    END_RCPP
 }
 
 static const R_CallMethodDef CallEntries[] = {
-    {"_Rnanoflann_nn", (DL_FUNC) &_Rnanoflann_nn, 12},
-    {NULL, NULL, 0}
-};
+    {"_Rnanoflann_nn", (DL_FUNC)&_Rnanoflann_nn, 13},
+    {NULL, NULL, 0}};
 
-RcppExport void R_init_Rnanoflann(DllInfo *dll) {
+RcppExport void R_init_Rnanoflann(DllInfo *dll)
+{
     R_registerRoutines(dll, NULL, CallEntries, NULL, NULL);
     R_useDynamicSymbols(dll, FALSE);
 }
