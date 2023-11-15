@@ -6,8 +6,52 @@
         "hidden": false
     },
     {
+        "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/internal/Coeff.h",
+        "file_last_write": 1699992321.0,
+        "definitions": [
+            {
+                "usr": "c:@N@Coeff@F@bhattacharyya#$@N@arma@S@Col>#d#S0_#",
+                "kind": 6,
+                "parent_name": "",
+                "name": "bhattacharyya(arma::colvec, arma::colvec)",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/internal/Coeff.h",
+                "line": 16,
+                "column": 19,
+                "hidden": false
+            }
+        ],
+        "hidden": false
+    },
+    {
+        "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/internal/Dist.h",
+        "file_last_write": 1699992321.0,
+        "definitions": [
+            {
+                "usr": "c:@N@Dist@F@manhattan#$@N@arma@S@Col>#d#S0_#",
+                "kind": 6,
+                "parent_name": "",
+                "name": "manhattan(arma::colvec, arma::colvec)",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/internal/Dist.h",
+                "line": 8,
+                "column": 19,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@Dist@F@euclidean#$@N@arma@S@Col>#d#S0_#",
+                "kind": 6,
+                "parent_name": "",
+                "name": "euclidean(arma::colvec, arma::colvec)",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/internal/Dist.h",
+                "line": 13,
+                "column": 19,
+                "hidden": false
+            }
+        ],
+        "hidden": false
+    },
+    {
         "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/internal/KDTreeArmadilloAdaptor.hpp",
-        "file_last_write": 1698312938.0,
+        "file_last_write": 1699992321.0,
         "definitions": [
             {
                 "usr": "c:@N@Rnanoflann@ST>3#T#T#NI@KDTreeArmadilloAdaptor",
@@ -25,7 +69,17 @@
                 "parent_name": "",
                 "name": "KDTreeArmadilloAdaptor2<MatrixType, Distance, Square, DIM>",
                 "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/internal/KDTreeArmadilloAdaptor.hpp",
-                "line": 64,
+                "line": 68,
+                "column": 12,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@Rnanoflann@ST>3#T#T#NI@KDTreeArmadilloAdaptor3",
+                "kind": 2,
+                "parent_name": "",
+                "name": "KDTreeArmadilloAdaptor3<MatrixType, Distance, DIM>",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/internal/KDTreeArmadilloAdaptor.hpp",
+                "line": 121,
                 "column": 12,
                 "hidden": false
             }
@@ -34,26 +88,26 @@
     },
     {
         "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/internal/dists.hpp",
-        "file_last_write": 1698312945.0,
+        "file_last_write": 1700048468.0,
         "definitions": [
-            {
-                "usr": "c:@N@Rnanoflann@ST>5#T#T#Nb#T#T@euclidean_adaptor",
-                "kind": 2,
-                "parent_name": "",
-                "name": "euclidean_adaptor<T, DataSource, Square, _DistanceType, IndexType>",
-                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/internal/dists.hpp",
-                "line": 11,
-                "column": 12,
-                "hidden": false
-            },
             {
                 "usr": "c:@N@Rnanoflann@S@euclidean",
                 "kind": 3,
                 "parent_name": "",
                 "name": "euclidean",
                 "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/internal/dists.hpp",
-                "line": 47,
+                "line": 17,
                 "column": 12,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@Rnanoflann@S@euclidean@ST>5#T#T#Nb#T#T@euclidean_adaptor",
+                "kind": 2,
+                "parent_name": "",
+                "name": "euclidean_adaptor<T, DataSource, Square, _DistanceType, IndexType>",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/internal/dists.hpp",
+                "line": 22,
+                "column": 16,
                 "hidden": false
             },
             {
@@ -62,11 +116,647 @@
                 "parent_name": "",
                 "name": "traits<T, DataSource, Square, IndexType>",
                 "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/internal/dists.hpp",
-                "line": 50,
+                "line": 54,
+                "column": 16,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@Rnanoflann@S@euclidean2",
+                "kind": 3,
+                "parent_name": "",
+                "name": "euclidean2",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/internal/dists.hpp",
+                "line": 60,
+                "column": 12,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@Rnanoflann@S@euclidean2@ST>5#T#T#Nb#T#T@euclidean2_adaptor",
+                "kind": 2,
+                "parent_name": "",
+                "name": "euclidean2_adaptor<T, DataSource, Square, _DistanceType, IndexType>",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/internal/dists.hpp",
+                "line": 65,
+                "column": 16,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@Rnanoflann@S@euclidean2@ST>4#T#T#Nb#T@traits",
+                "kind": 2,
+                "parent_name": "",
+                "name": "traits<T, DataSource, Square, IndexType>",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/internal/dists.hpp",
+                "line": 94,
+                "column": 16,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@Rnanoflann@S@manhattan",
+                "kind": 3,
+                "parent_name": "",
+                "name": "manhattan",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/internal/dists.hpp",
+                "line": 100,
+                "column": 12,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@Rnanoflann@S@manhattan@ST>4#T#T#T#T@manhattan_adaptor",
+                "kind": 2,
+                "parent_name": "",
+                "name": "manhattan_adaptor<T, DataSource, _DistanceType, IndexType>",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/internal/dists.hpp",
+                "line": 105,
+                "column": 16,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@Rnanoflann@S@manhattan@ST>3#T#T#T@traits",
+                "kind": 2,
+                "parent_name": "",
+                "name": "traits<T, DataSource, IndexType>",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/internal/dists.hpp",
+                "line": 134,
+                "column": 16,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@Rnanoflann@S@hellinger",
+                "kind": 3,
+                "parent_name": "",
+                "name": "hellinger",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/internal/dists.hpp",
+                "line": 140,
+                "column": 12,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@Rnanoflann@S@hellinger@ST>5#T#T#Nb#T#T@hellinger_adaptor",
+                "kind": 2,
+                "parent_name": "",
+                "name": "hellinger_adaptor<T, DataSource, Square, _DistanceType, IndexType>",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/internal/dists.hpp",
+                "line": 145,
+                "column": 16,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@Rnanoflann@S@hellinger@ST>4#T#T#Nb#T@traits",
+                "kind": 2,
+                "parent_name": "",
+                "name": "traits<T, DataSource, Square, IndexType>",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/internal/dists.hpp",
+                "line": 174,
+                "column": 16,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@Rnanoflann@S@minkowski",
+                "kind": 3,
+                "parent_name": "",
+                "name": "minkowski",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/internal/dists.hpp",
+                "line": 180,
+                "column": 12,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@Rnanoflann@S@minkowski@ST>4#T#T#T#T@minkowski_adaptor",
+                "kind": 2,
+                "parent_name": "",
+                "name": "minkowski_adaptor<T, DataSource, _DistanceType, IndexType>",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/internal/dists.hpp",
+                "line": 185,
+                "column": 16,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@Rnanoflann@S@minkowski@ST>3#T#T#T@traits",
+                "kind": 2,
+                "parent_name": "",
+                "name": "traits<T, DataSource, IndexType>",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/internal/dists.hpp",
+                "line": 216,
+                "column": 16,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@Rnanoflann@S@maximum",
+                "kind": 3,
+                "parent_name": "",
+                "name": "maximum",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/internal/dists.hpp",
+                "line": 222,
+                "column": 12,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@Rnanoflann@S@maximum@ST>4#T#T#T#T@maximum_adaptor",
+                "kind": 2,
+                "parent_name": "",
+                "name": "maximum_adaptor<T, DataSource, _DistanceType, IndexType>",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/internal/dists.hpp",
+                "line": 227,
+                "column": 16,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@Rnanoflann@S@maximum@ST>3#T#T#T@traits",
+                "kind": 2,
+                "parent_name": "",
+                "name": "traits<T, DataSource, IndexType>",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/internal/dists.hpp",
+                "line": 256,
+                "column": 16,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@Rnanoflann@S@minimum",
+                "kind": 3,
+                "parent_name": "",
+                "name": "minimum",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/internal/dists.hpp",
+                "line": 262,
+                "column": 12,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@Rnanoflann@S@minimum@ST>4#T#T#T#T@minimum_adaptor",
+                "kind": 2,
+                "parent_name": "",
+                "name": "minimum_adaptor<T, DataSource, _DistanceType, IndexType>",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/internal/dists.hpp",
+                "line": 267,
+                "column": 16,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@Rnanoflann@S@minimum@ST>3#T#T#T@traits",
+                "kind": 2,
+                "parent_name": "",
+                "name": "traits<T, DataSource, IndexType>",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/internal/dists.hpp",
+                "line": 296,
+                "column": 16,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@Rnanoflann@S@total_variation",
+                "kind": 3,
+                "parent_name": "",
+                "name": "total_variation",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/internal/dists.hpp",
+                "line": 302,
+                "column": 12,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@Rnanoflann@S@total_variation@ST>4#T#T#T#T@total_variation_adaptor",
+                "kind": 2,
+                "parent_name": "",
+                "name": "total_variation_adaptor<T, DataSource, _DistanceType, IndexType>",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/internal/dists.hpp",
+                "line": 307,
+                "column": 16,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@Rnanoflann@S@total_variation@ST>3#T#T#T@traits",
+                "kind": 2,
+                "parent_name": "",
+                "name": "traits<T, DataSource, IndexType>",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/internal/dists.hpp",
+                "line": 335,
+                "column": 16,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@Rnanoflann@S@cosine",
+                "kind": 3,
+                "parent_name": "",
+                "name": "cosine",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/internal/dists.hpp",
+                "line": 341,
+                "column": 12,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@Rnanoflann@S@cosine@ST>4#T#T#T#T@cosine_adaptor",
+                "kind": 2,
+                "parent_name": "",
+                "name": "cosine_adaptor<T, DataSource, _DistanceType, IndexType>",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/internal/dists.hpp",
+                "line": 346,
+                "column": 16,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@Rnanoflann@S@cosine@ST>3#T#T#T@traits",
+                "kind": 2,
+                "parent_name": "",
+                "name": "traits<T, DataSource, IndexType>",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/internal/dists.hpp",
+                "line": 374,
+                "column": 16,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@Rnanoflann@S@gower",
+                "kind": 3,
+                "parent_name": "",
+                "name": "gower",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/internal/dists.hpp",
+                "line": 380,
+                "column": 12,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@Rnanoflann@S@gower@ST>4#T#T#T#T@gower_adaptor",
+                "kind": 2,
+                "parent_name": "",
+                "name": "gower_adaptor<T, DataSource, _DistanceType, IndexType>",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/internal/dists.hpp",
+                "line": 385,
+                "column": 16,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@Rnanoflann@S@gower@ST>3#T#T#T@traits",
+                "kind": 2,
+                "parent_name": "",
+                "name": "traits<T, DataSource, IndexType>",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/internal/dists.hpp",
+                "line": 413,
+                "column": 16,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@Rnanoflann@S@sorensen",
+                "kind": 3,
+                "parent_name": "",
+                "name": "sorensen",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/internal/dists.hpp",
+                "line": 419,
+                "column": 12,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@Rnanoflann@S@sorensen@ST>4#T#T#T#T@sorensen_adaptor",
+                "kind": 2,
+                "parent_name": "",
+                "name": "sorensen_adaptor<T, DataSource, _DistanceType, IndexType>",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/internal/dists.hpp",
+                "line": 424,
+                "column": 16,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@Rnanoflann@S@sorensen@ST>3#T#T#T@traits",
+                "kind": 2,
+                "parent_name": "",
+                "name": "traits<T, DataSource, IndexType>",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/internal/dists.hpp",
+                "line": 452,
+                "column": 16,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@Rnanoflann@S@canberra",
+                "kind": 3,
+                "parent_name": "",
+                "name": "canberra",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/internal/dists.hpp",
+                "line": 458,
+                "column": 12,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@Rnanoflann@S@canberra@ST>4#T#T#T#T@canberra_adaptor",
+                "kind": 2,
+                "parent_name": "",
+                "name": "canberra_adaptor<T, DataSource, _DistanceType, IndexType>",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/internal/dists.hpp",
+                "line": 463,
+                "column": 16,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@Rnanoflann@S@canberra@ST>3#T#T#T@traits",
+                "kind": 2,
+                "parent_name": "",
+                "name": "traits<T, DataSource, IndexType>",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/internal/dists.hpp",
+                "line": 491,
+                "column": 16,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@Rnanoflann@S@kullback_leibler",
+                "kind": 3,
+                "parent_name": "",
+                "name": "kullback_leibler",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/internal/dists.hpp",
+                "line": 497,
+                "column": 12,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@Rnanoflann@S@kullback_leibler@ST>4#T#T#T#T@kullback_leibler_adaptor",
+                "kind": 2,
+                "parent_name": "",
+                "name": "kullback_leibler_adaptor<T, DataSource, _DistanceType, IndexType>",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/internal/dists.hpp",
+                "line": 502,
+                "column": 16,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@Rnanoflann@S@kullback_leibler@ST>3#T#T#T@traits",
+                "kind": 2,
+                "parent_name": "",
+                "name": "traits<T, DataSource, IndexType>",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/internal/dists.hpp",
+                "line": 538,
+                "column": 16,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@Rnanoflann@S@jensen_shannon",
+                "kind": 3,
+                "parent_name": "",
+                "name": "jensen_shannon",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/internal/dists.hpp",
+                "line": 544,
+                "column": 12,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@Rnanoflann@S@jensen_shannon@ST>4#T#T#T#T@jensen_shannon_adaptor",
+                "kind": 2,
+                "parent_name": "",
+                "name": "jensen_shannon_adaptor<T, DataSource, _DistanceType, IndexType>",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/internal/dists.hpp",
+                "line": 549,
+                "column": 16,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@Rnanoflann@S@jensen_shannon@ST>3#T#T#T@traits",
+                "kind": 2,
+                "parent_name": "",
+                "name": "traits<T, DataSource, IndexType>",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/internal/dists.hpp",
+                "line": 585,
+                "column": 16,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@Rnanoflann@S@itakura_saito",
+                "kind": 3,
+                "parent_name": "",
+                "name": "itakura_saito",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/internal/dists.hpp",
+                "line": 591,
+                "column": 12,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@Rnanoflann@S@itakura_saito@ST>4#T#T#T#T@itakura_saito_adaptor",
+                "kind": 2,
+                "parent_name": "",
+                "name": "itakura_saito_adaptor<T, DataSource, _DistanceType, IndexType>",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/internal/dists.hpp",
+                "line": 596,
+                "column": 16,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@Rnanoflann@S@itakura_saito@ST>3#T#T#T@traits",
+                "kind": 2,
+                "parent_name": "",
+                "name": "traits<T, DataSource, IndexType>",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/internal/dists.hpp",
+                "line": 633,
+                "column": 16,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@Rnanoflann@S@bhattacharyya",
+                "kind": 3,
+                "parent_name": "",
+                "name": "bhattacharyya",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/internal/dists.hpp",
+                "line": 639,
+                "column": 12,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@Rnanoflann@S@bhattacharyya@ST>4#T#T#T#T@bhattacharyya_adaptor",
+                "kind": 2,
+                "parent_name": "",
+                "name": "bhattacharyya_adaptor<T, DataSource, _DistanceType, IndexType>",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/internal/dists.hpp",
+                "line": 644,
+                "column": 16,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@Rnanoflann@S@bhattacharyya@ST>3#T#T#T@traits",
+                "kind": 2,
+                "parent_name": "",
+                "name": "traits<T, DataSource, IndexType>",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/internal/dists.hpp",
+                "line": 672,
+                "column": 16,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@Rnanoflann@S@jeffries_matusita",
+                "kind": 3,
+                "parent_name": "",
+                "name": "jeffries_matusita",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/internal/dists.hpp",
+                "line": 678,
+                "column": 12,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@Rnanoflann@S@jeffries_matusita@ST>4#T#T#T#T@jeffries_matusita_adaptor",
+                "kind": 2,
+                "parent_name": "",
+                "name": "jeffries_matusita_adaptor<T, DataSource, _DistanceType, IndexType>",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/internal/dists.hpp",
+                "line": 683,
+                "column": 16,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@Rnanoflann@S@jeffries_matusita@ST>3#T#T#T@traits",
+                "kind": 2,
+                "parent_name": "",
+                "name": "traits<T, DataSource, IndexType>",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/internal/dists.hpp",
+                "line": 711,
+                "column": 16,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@Rnanoflann@S@soergel",
+                "kind": 3,
+                "parent_name": "",
+                "name": "soergel",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/internal/dists.hpp",
+                "line": 717,
+                "column": 12,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@Rnanoflann@S@soergel@ST>4#T#T#T#T@soergel_adaptor",
+                "kind": 2,
+                "parent_name": "",
+                "name": "soergel_adaptor<T, DataSource, _DistanceType, IndexType>",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/internal/dists.hpp",
+                "line": 722,
+                "column": 16,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@Rnanoflann@S@soergel@ST>3#T#T#T@traits",
+                "kind": 2,
+                "parent_name": "",
+                "name": "traits<T, DataSource, IndexType>",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/internal/dists.hpp",
+                "line": 750,
+                "column": 16,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@Rnanoflann@S@kulczynski",
+                "kind": 3,
+                "parent_name": "",
+                "name": "kulczynski",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/internal/dists.hpp",
+                "line": 756,
+                "column": 12,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@Rnanoflann@S@kulczynski@ST>4#T#T#T#T@kulczynski_adaptor",
+                "kind": 2,
+                "parent_name": "",
+                "name": "kulczynski_adaptor<T, DataSource, _DistanceType, IndexType>",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/internal/dists.hpp",
+                "line": 761,
+                "column": 16,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@Rnanoflann@S@kulczynski@ST>3#T#T#T@traits",
+                "kind": 2,
+                "parent_name": "",
+                "name": "traits<T, DataSource, IndexType>",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/internal/dists.hpp",
+                "line": 789,
+                "column": 16,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@Rnanoflann@S@wave_hedges",
+                "kind": 3,
+                "parent_name": "",
+                "name": "wave_hedges",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/internal/dists.hpp",
+                "line": 795,
+                "column": 12,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@Rnanoflann@S@wave_hedges@ST>4#T#T#T#T@wave_hedges_adaptor",
+                "kind": 2,
+                "parent_name": "",
+                "name": "wave_hedges_adaptor<T, DataSource, _DistanceType, IndexType>",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/internal/dists.hpp",
+                "line": 800,
+                "column": 16,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@Rnanoflann@S@wave_hedges@ST>3#T#T#T@traits",
+                "kind": 2,
+                "parent_name": "",
+                "name": "traits<T, DataSource, IndexType>",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/internal/dists.hpp",
+                "line": 828,
+                "column": 16,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@Rnanoflann@S@motyka",
+                "kind": 3,
+                "parent_name": "",
+                "name": "motyka",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/internal/dists.hpp",
+                "line": 834,
+                "column": 12,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@Rnanoflann@S@motyka@ST>4#T#T#T#T@motyka_adaptor",
+                "kind": 2,
+                "parent_name": "",
+                "name": "motyka_adaptor<T, DataSource, _DistanceType, IndexType>",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/internal/dists.hpp",
+                "line": 839,
+                "column": 16,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@Rnanoflann@S@motyka@ST>3#T#T#T@traits",
+                "kind": 2,
+                "parent_name": "",
+                "name": "traits<T, DataSource, IndexType>",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/internal/dists.hpp",
+                "line": 867,
+                "column": 16,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@Rnanoflann@S@harmonic_mean",
+                "kind": 3,
+                "parent_name": "",
+                "name": "harmonic_mean",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/internal/dists.hpp",
+                "line": 873,
+                "column": 12,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@Rnanoflann@S@harmonic_mean@ST>4#T#T#T#T@harmonic_mean_adaptor",
+                "kind": 2,
+                "parent_name": "",
+                "name": "harmonic_mean_adaptor<T, DataSource, _DistanceType, IndexType>",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/internal/dists.hpp",
+                "line": 878,
+                "column": 16,
+                "hidden": false
+            },
+            {
+                "usr": "c:@N@Rnanoflann@S@harmonic_mean@ST>3#T#T#T@traits",
+                "kind": 2,
+                "parent_name": "",
+                "name": "traits<T, DataSource, IndexType>",
+                "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/internal/dists.hpp",
+                "line": 906,
                 "column": 16,
                 "hidden": false
             }
         ],
+        "hidden": false
+    },
+    {
+        "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/inst/include/internal/helpers.h",
+        "file_last_write": 1699992321.0,
+        "definitions": [],
         "hidden": false
     },
     {
@@ -468,15 +1158,15 @@
     },
     {
         "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/src/knn.cpp",
-        "file_last_write": 1698313134.0,
+        "file_last_write": 1699992321.0,
         "definitions": [
             {
-                "usr": "c:@F@nn#$@N@arma@S@Mat>#d#S0_#I#1I#1I#1d#1b#1b#1d#1i#1b#1i#",
+                "usr": "c:@F@nn#$@N@arma@S@Mat>#d#S0_#I#1I#1I#1d#1b#1b#1d#1i#1d#1b#1i#",
                 "kind": 6,
                 "parent_name": "",
-                "name": "nn(arma::mat, arma::mat, arma::uword, const int, const int, const double, const bool, const bool, const double, const unsigned int, const bool, const unsigned int)",
+                "name": "nn(arma::mat, arma::mat, arma::uword, const int, const int, const double, const bool, const bool, const double, const unsigned int, const double, const bool, const unsigned int)",
                 "file": "C:/Users/epapadakis/Documents/GitHub/Rnanoflann/src/knn.cpp",
-                "line": 46,
+                "line": 54,
                 "column": 6,
                 "hidden": false
             }
