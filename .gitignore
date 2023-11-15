@@ -1,6 +1,6 @@
 
-*src/.dll
-*src/.o
+src/**/*.o
+src/**/*.dll
 *.dll
 *.o
 *.RData
