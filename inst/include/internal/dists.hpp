@@ -77,9 +77,9 @@ namespace Rnanoflann
             DistanceType evalMetric(
                 const T *a, const IndexType b_idx, size_t size) const
             {
-                Col<DistanceType> x(const_cast<T *>(a), size, false);
-                const Col<DistanceType> y = data_source.col(b_idx);
-                DistanceType result = Dist::euclidean(x, y);
+                Col<DistanceType> y(const_cast<T *>(a), size, false);
+                const Col<DistanceType> x = data_source.col(b_idx);
+                DistanceType result = Dist::euclidean(y, x);
                 return Square ? result : std::sqrt(result);
             }
 
@@ -117,9 +117,9 @@ namespace Rnanoflann
             DistanceType evalMetric(
                 const T *a, const IndexType b_idx, size_t size) const
             {
-                Col<DistanceType> x(const_cast<T *>(a), size, false);
-                const Col<DistanceType> y = data_source.col(b_idx);
-                DistanceType result = Dist::manhattan(x, y);
+                Col<DistanceType> y(const_cast<T *>(a), size, false);
+                const Col<DistanceType> x = data_source.col(b_idx);
+                DistanceType result = Dist::manhattan(y, x);
                 return result;
             }
 
@@ -157,9 +157,9 @@ namespace Rnanoflann
             DistanceType evalMetric(
                 const T *a, const IndexType b_idx, size_t size) const
             {
-                Col<DistanceType> x(const_cast<T *>(a), size, false);
-                const Col<DistanceType> y = data_source.col(b_idx);
-                DistanceType result = Dist::euclidean(x, y);
+                Col<DistanceType> y(const_cast<T *>(a), size, false);
+                const Col<DistanceType> x = data_source.col(b_idx);
+                DistanceType result = Dist::euclidean(y, x);
                 return Square ? result * 0.5 : std::sqrt(result) * (1.0 / std::sqrt(2.0));
             }
 
@@ -239,8 +239,8 @@ namespace Rnanoflann
             DistanceType evalMetric(
                 const T *a, const IndexType b_idx, size_t size) const
             {
-                Col<DistanceType> x(const_cast<T *>(a), size, false);
-                const Col<DistanceType> y = data_source.col(b_idx);
+                Col<DistanceType> y(const_cast<T *>(a), size, false);
+                const Col<DistanceType> x = data_source.col(b_idx);
                 Col<DistanceType> result = abs(x - y);
                 return result[result.index_max()];
             }
@@ -279,8 +279,8 @@ namespace Rnanoflann
             DistanceType evalMetric(
                 const T *a, const IndexType b_idx, size_t size) const
             {
-                Col<DistanceType> x(const_cast<T *>(a), size, false);
-                const Col<DistanceType> y = data_source.col(b_idx);
+                Col<DistanceType> y(const_cast<T *>(a), size, false);
+                const Col<DistanceType> x = data_source.col(b_idx);
                 Col<DistanceType> result = abs(x - y);
                 return result[result.index_min()];
             }
@@ -319,9 +319,9 @@ namespace Rnanoflann
             DistanceType evalMetric(
                 const T *a, const IndexType b_idx, size_t size) const
             {
-                Col<DistanceType> x(const_cast<T *>(a), size, false);
-                const Col<DistanceType> y = data_source.col(b_idx);
-                return Dist::manhattan(x, y) * 0.5;
+                Col<DistanceType> y(const_cast<T *>(a), size, false);
+                const Col<DistanceType> x = data_source.col(b_idx);
+                return Dist::manhattan(y, x) * 0.5;
             }
 
             template <typename U, typename V>
@@ -358,9 +358,9 @@ namespace Rnanoflann
             DistanceType evalMetric(
                 const T *a, const IndexType b_idx, size_t size) const
             {
-                Col<DistanceType> x(const_cast<T *>(a), size, false);
-                const Col<DistanceType> y = data_source.col(b_idx);
-                return dot(x, y) / (sqrt(sum(square(x))) * sqrt(sum(square(y))));
+                Col<DistanceType> y(const_cast<T *>(a), size, false);
+                const Col<DistanceType> x = data_source.col(b_idx);
+                return dot(y, x) / (sqrt(sum(square(x))) * sqrt(sum(square(y))));
             }
 
             template <typename U, typename V>
@@ -397,9 +397,9 @@ namespace Rnanoflann
             DistanceType evalMetric(
                 const T *a, const IndexType b_idx, size_t size) const
             {
-                Col<DistanceType> x(const_cast<T *>(a), size, false);
-                const Col<DistanceType> y = data_source.col(b_idx);
-                return Dist::manhattan(x, y) * (1.0 / size);
+                Col<DistanceType> y(const_cast<T *>(a), size, false);
+                const Col<DistanceType> x = data_source.col(b_idx);
+                return Dist::manhattan(y, x) * (1.0 / size);
             }
 
             template <typename U, typename V>
@@ -436,9 +436,9 @@ namespace Rnanoflann
             DistanceType evalMetric(
                 const T *a, const IndexType b_idx, size_t size) const
             {
-                Col<DistanceType> x(const_cast<T *>(a), size, false);
-                const Col<DistanceType> y = data_source.col(b_idx);
-                return sum(abs(x - y) / (x + y));
+                Col<DistanceType> y(const_cast<T *>(a), size, false);
+                const Col<DistanceType> x = data_source.col(b_idx);
+                return sum(abs(x - y) / (y + x));
             }
 
             template <typename U, typename V>
@@ -475,8 +475,8 @@ namespace Rnanoflann
             DistanceType evalMetric(
                 const T *a, const IndexType b_idx, size_t size) const
             {
-                Col<DistanceType> x(const_cast<T *>(a), size, false);
-                const Col<DistanceType> y = data_source.col(b_idx);
+                Col<DistanceType> y(const_cast<T *>(a), size, false);
+                const Col<DistanceType> x = data_source.col(b_idx);
                 return sum(abs(x - y) / (abs(x) + abs(y)));
             }
 
@@ -514,15 +514,11 @@ namespace Rnanoflann
             DistanceType evalMetric(
                 const T *a, const IndexType b_idx, size_t size) const
             {
-                // Col<DistanceType> x(const_cast<T *>(a), size, false);
-                // const Col<DistanceType> y = data_source.col(b_idx);
-                // return sum((x - y) % (log(x) - log(y)));
-
                 DistanceType res = DistanceType();
                 for (size_t i = 0; i < size; ++i)
                 {
-                    DistanceType x = a[i], y = data_source.kdtree_get_pt(b_idx, i);
-                    DistanceType v = (x - y) * (std::log(x) - std::log(y));
+                    DistanceType y = a[i], x = data_source.kdtree_get_pt(b_idx, i);
+                    DistanceType v = (y - x) * (std::log(y) - std::log(x));
                     if (std::isfinite(v))
                     {
                         res += v;
@@ -568,8 +564,8 @@ namespace Rnanoflann
                 DistanceType res = DistanceType();
                 for (size_t i = 0; i < size; ++i)
                 {
-                    DistanceType x = a[i], y = data_source.kdtree_get_pt(b_idx, i);
-                    DistanceType v = (x + y) * (std::log(2) - std::log(x + y)) + x * std::log(x) + y * std::log(y);
+                    DistanceType y = a[i], x = data_source.kdtree_get_pt(b_idx, i);
+                    DistanceType v = (y + x) * (std::log(2) - std::log(y + x)) + y * std::log(y) + x * std::log(x);
                     if (v > 0 and !R_IsNA(v))
                     {
                         res += v;
@@ -612,27 +608,18 @@ namespace Rnanoflann
             DistanceType evalMetric(
                 const T *a, const IndexType b_idx, size_t size) const
             {
-                // DistanceType res = DistanceType();
-                // for (size_t i = 0; i < size; ++i)
-                // {
-                //     DistanceType x = a[i], y = data_source.kdtree_get_pt(b_idx, i);
-                //     DistanceType v = (x / y) - (std::log(x / y)) - 1.0;
-                //     // if (std::isfinite(v))
-                //     // {
-                //         res += v;
-                //     // }
-                // }
-                
-                Col<DistanceType> x(const_cast<T *>(a), size, false);
-                const Col<DistanceType> y = data_source.col(b_idx);
-                Col<DistanceType> log_x(size,fill::none);
-                Col<DistanceType> log_y(size,fill::none);
+                DistanceType res = DistanceType();
                 for (size_t i = 0; i < size; ++i)
                 {
-                    log_x[i] = std::log(x[i]);
-                    log_y[i] = std::log(y[i]);
+                    DistanceType y = a[i], x = data_source.kdtree_get_pt(b_idx, i);
+                    DistanceType v = (x / y) - (std::log(x) - std::log(y)) - 1.0; // Not symmetric so x/y is not y/x
+                    if (std::isfinite(v))
+                    {
+                        res += v;
+                    }
                 }
-                return sum((x / y) - (log_x - log_y) - 1.0);
+
+                return res;
             }
 
             template <typename U, typename V>
@@ -669,9 +656,9 @@ namespace Rnanoflann
             DistanceType evalMetric(
                 const T *a, const IndexType b_idx, size_t size) const
             {
-                Col<DistanceType> x(const_cast<T *>(a), size, false);
-                const Col<DistanceType> y = data_source.col(b_idx);
-                return -log(Coeff::bhattacharyya(x, y));
+                Col<DistanceType> y(const_cast<T *>(a), size, false);
+                const Col<DistanceType> x = data_source.col(b_idx);
+                return -log(Coeff::bhattacharyya(y, x));
             }
 
             template <typename U, typename V>
@@ -708,9 +695,9 @@ namespace Rnanoflann
             DistanceType evalMetric(
                 const T *a, const IndexType b_idx, size_t size) const
             {
-                Col<DistanceType> x(const_cast<T *>(a), size, false);
-                const Col<DistanceType> y = data_source.col(b_idx);
-                return std::sqrt(2.0 - 2.0 * Coeff::bhattacharyya(x, y));
+                Col<DistanceType> y(const_cast<T *>(a), size, false);
+                const Col<DistanceType> x = data_source.col(b_idx);
+                return std::sqrt(2.0 - 2.0 * Coeff::bhattacharyya(y, x));
             }
 
             template <typename U, typename V>
@@ -747,9 +734,9 @@ namespace Rnanoflann
             DistanceType evalMetric(
                 const T *a, const IndexType b_idx, size_t size) const
             {
-                Col<DistanceType> x(const_cast<T *>(a), size, false);
-                const Col<DistanceType> y = data_source.col(b_idx);
-                return Dist::manhattan(x, y) / sum_with<std::max, Col<DistanceType>>(x, y);
+                Col<DistanceType> y(const_cast<T *>(a), size, false);
+                const Col<DistanceType> x = data_source.col(b_idx);
+                return Dist::manhattan(y, x) / sum_with<std::max, Col<DistanceType>>(y, x);
             }
 
             template <typename U, typename V>
@@ -786,9 +773,9 @@ namespace Rnanoflann
             DistanceType evalMetric(
                 const T *a, const IndexType b_idx, size_t size) const
             {
-                Col<DistanceType> x(const_cast<T *>(a), size, false);
-                const Col<DistanceType> y = data_source.col(b_idx);
-                return Dist::manhattan(x, y) / sum_with<std::min, Col<DistanceType>>(x, y);
+                Col<DistanceType> y(const_cast<T *>(a), size, false);
+                const Col<DistanceType> x = data_source.col(b_idx);
+                return Dist::manhattan(y, x) / sum_with<std::min, Col<DistanceType>>(y, x);
             }
 
             template <typename U, typename V>
@@ -825,9 +812,9 @@ namespace Rnanoflann
             DistanceType evalMetric(
                 const T *a, const IndexType b_idx, size_t size) const
             {
-                Col<DistanceType> x(const_cast<T *>(a), size, false);
-                const Col<DistanceType> y = data_source.col(b_idx);
-                return sum(abs(x - y) / elems<std::max>(x, y));
+                Col<DistanceType> y(const_cast<T *>(a), size, false);
+                const Col<DistanceType> x = data_source.col(b_idx);
+                return sum(abs(y - x) / elems<std::max>(y, x));
             }
 
             template <typename U, typename V>
@@ -864,9 +851,9 @@ namespace Rnanoflann
             DistanceType evalMetric(
                 const T *a, const IndexType b_idx, size_t size) const
             {
-                Col<DistanceType> x(const_cast<T *>(a), size, false);
-                const Col<DistanceType> y = data_source.col(b_idx);
-                return 1.0 - sum_with<std::min, Col<DistanceType>>(x, y) / sum(x + y);
+                Col<DistanceType> y(const_cast<T *>(a), size, false);
+                const Col<DistanceType> x = data_source.col(b_idx);
+                return 1.0 - sum_with<std::min, Col<DistanceType>>(y, x) / sum(y + x);
             }
 
             template <typename U, typename V>
@@ -903,9 +890,9 @@ namespace Rnanoflann
             DistanceType evalMetric(
                 const T *a, const IndexType b_idx, size_t size) const
             {
-                Col<DistanceType> x(const_cast<T *>(a), size, false);
-                const Col<DistanceType> y = data_source.col(b_idx);
-                return 2.0 * dot(x, y) / sum(x + y);
+                Col<DistanceType> y(const_cast<T *>(a), size, false);
+                const Col<DistanceType> x = data_source.col(b_idx);
+                return 2.0 * dot(y, x) / sum(y + x);
             }
 
             template <typename U, typename V>
