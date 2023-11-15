@@ -5,3 +5,4 @@ src/**/*.dll
 *.o
 *.RData
 *.Rhistory
+.Rproj.user
