@@ -235,6 +235,10 @@ List nn(arma::mat data, arma::mat points, arma::uword k, const std::string metho
         my_kd_tree_t mat_index(data.n_rows, data, leafs);
         nn_helper(mat_index, searchParams, points, k, search, radius, parallel, cores, indices, distances);
     }
+    else
+    {
+        stop("Unsupported Method: %s", method);
+    }
 
     return List::create(_["indices"] = indices + 1, _["distances"] = distances);
 }

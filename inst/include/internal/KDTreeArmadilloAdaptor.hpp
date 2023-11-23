@@ -109,10 +109,6 @@ namespace Rnanoflann {
         {
             return m_data_matrix.get()(dim,idx);
         }
-
-        double log0_5() const {
-            return std::log(0.5);
-        }
         
         template <class BBOX>
         bool kdtree_get_bbox(BBOX& bb) const
@@ -241,6 +237,10 @@ namespace Rnanoflann {
         colvec col_ylogy(const num_t * a) const {
             auto index = std::floor((a-begin_points)/ylogy.n_rows);
             return ylogy.col(index);
+        }
+
+        double log0_5() const {
+            return std::log(0.5);
         }
 
         uword colNumber(uword idx) const {
