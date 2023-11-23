@@ -12,8 +12,6 @@ using namespace arma;
 namespace Rnanoflann
 {
 
-    /** Metaprogramming helper traits class for the L2 (Euclidean) **squared**
-     * distance metric */
     struct euclidean : public Metric
     {
         template <
@@ -27,49 +25,6 @@ namespace Rnanoflann
             const DataSource &data_source;
 
             euclidean_adaptor(const DataSource &_data_source)
-                : data_source(_data_source)
-            {
-            }
-
-            DistanceType evalMetric(
-                const T *a, const IndexType b_idx, size_t size) const
-            {
-                DistanceType result = DistanceType();
-                for (size_t i = 0; i < size; ++i)
-                {
-                    const DistanceType diff = a[i] - data_source.kdtree_get_pt(b_idx, i);
-                    result += diff * diff;
-                }
-                return Square ? result : std::sqrt(result);
-            }
-
-            template <typename U, typename V>
-            DistanceType accum_dist(const U a, const V b, const size_t) const
-            {
-                return 0;
-            }
-        };
-
-        template <class T, class DataSource, bool Square, typename IndexType = uint32_t>
-        struct traits
-        {
-            using distance_t = euclidean_adaptor<T, DataSource, Square, T, IndexType>;
-        };
-    };
-
-    struct euclidean2 : public Metric
-    {
-        template <
-            class T, class DataSource, bool Square, typename _DistanceType = T,
-            typename IndexType = uint32_t>
-        struct euclidean2_adaptor
-        {
-            using ElementType = T;
-            using DistanceType = _DistanceType;
-
-            const DataSource &data_source;
-
-            euclidean2_adaptor(const DataSource &_data_source)
                 : data_source(_data_source)
             {
             }
@@ -93,7 +48,7 @@ namespace Rnanoflann
         template <class T, class DataSource, bool Square, typename IndexType = uint32_t>
         struct traits
         {
-            using distance_t = euclidean2_adaptor<T, DataSource, Square, T, IndexType>;
+            using distance_t = euclidean_adaptor<T, DataSource, Square, T, IndexType>;
         };
     };
 
@@ -561,17 +516,11 @@ namespace Rnanoflann
             DistanceType evalMetric(
                 const T *a, const IndexType b_idx, size_t size) const
             {
-                DistanceType res = DistanceType();
-                for (size_t i = 0; i < size; ++i)
-                {
-                    DistanceType y = a[i], x = data_source.kdtree_get_pt(b_idx, i);
-                    DistanceType v = (y + x) * (std::log(2) - std::log(y + x)) + y * std::log(y) + x * std::log(x);
-                    if (v > 0 and !R_IsNA(v))
-                    {
-                        res += v;
-                    }
-                }
-                return res;
+                Col<DistanceType> y(const_cast<T *>(a), size, false);
+                const Col<DistanceType> x = data_source.col(b_idx);
+                Col<DistanceType> v = x + y;
+                return sum_with_condition<double, check_if_is_finite, colvec>(
+                    data_source.col_xlogx(b_idx) + data_source.col_ylogy(a) - (arma::log(v) + data_source.log0_5()) % (v));
             }
 
             template <typename U, typename V>

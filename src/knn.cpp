@@ -12,6 +12,7 @@ using namespace Rcpp;
 using Rnanoflann::KDTreeArmadilloAdaptor;
 using Rnanoflann::KDTreeArmadilloAdaptor2;
 using Rnanoflann::KDTreeArmadilloAdaptor3;
+using Rnanoflann::KDTreeArmadilloAdaptor4;
 
 template <class T>
 void nn_helper(T &mat_index, SearchParameters &searchParams, arma::mat &points, arma::uword k,
@@ -20,31 +21,61 @@ void nn_helper(T &mat_index, SearchParameters &searchParams, arma::mat &points, 
 {
     if (search == "standard")
     {
-#ifdef _OPENMP
-#pragma omp parallel for if (parallel) num_threads(cores)
-#endif
-        for (uword i = 0; i < points.n_cols; ++i)
+        if (parallel)
         {
-            mat_index.index_->knnSearch(points.colptr(i), k, indices.colptr(i), distances.colptr(i));
+#ifdef _OPENMP
+#pragma omp parallel for num_threads(cores)
+#endif
+            for (uword i = 0; i < points.n_cols; ++i)
+            {
+                mat_index.index_->knnSearch(points.colptr(i), k, indices.colptr(i), distances.colptr(i));
+            }
+        }
+        else
+        {
+            for (uword i = 0; i < points.n_cols; ++i)
+            {
+                mat_index.index_->knnSearch(points.colptr(i), k, indices.colptr(i), distances.colptr(i));
+            }
         }
     }
     else if (search == "radius")
     {
-#ifdef _OPENMP
-#pragma omp parallel for if (parallel) num_threads(cores)
-#endif
-        for (uword i = 0; i < points.n_cols; ++i)
+        if (parallel)
         {
-            std::vector<ResultItem<uword, double>> radius_search_results; // Store the results
-            radius_search_results.reserve(k);
-            mat_index.index_->radiusSearch(points.memptr(), radius, radius_search_results);
-
-            uword *ind = indices.colptr(i);
-            double *dist = distances.colptr(i);
-            for (uword j = 0; j < radius_search_results.size(); ++j)
+#ifdef _OPENMP
+#pragma omp parallel for num_threads(cores)
+#endif
+            for (uword i = 0; i < points.n_cols; ++i)
             {
-                ind[j] = radius_search_results[j].first;
-                dist[j] = radius_search_results[j].second;
+                std::vector<ResultItem<uword, double>> radius_search_results; // Store the results
+                radius_search_results.reserve(k);
+                mat_index.index_->radiusSearch(points.memptr(), radius, radius_search_results);
+
+                uword *ind = indices.colptr(i);
+                double *dist = distances.colptr(i);
+                for (uword j = 0; j < radius_search_results.size(); ++j)
+                {
+                    ind[j] = radius_search_results[j].first;
+                    dist[j] = radius_search_results[j].second;
+                }
+            }
+        }
+        else
+        {
+            for (uword i = 0; i < points.n_cols; ++i)
+            {
+                std::vector<ResultItem<uword, double>> radius_search_results; // Store the results
+                radius_search_results.reserve(k);
+                mat_index.index_->radiusSearch(points.memptr(), radius, radius_search_results);
+
+                uword *ind = indices.colptr(i);
+                double *dist = distances.colptr(i);
+                for (uword j = 0; j < radius_search_results.size(); ++j)
+                {
+                    ind[j] = radius_search_results[j].first;
+                    dist[j] = radius_search_results[j].second;
+                }
             }
         }
     }
@@ -71,21 +102,6 @@ List nn(arma::mat data, arma::mat points, arma::uword k, const std::string metho
         else
         {
             using my_kd_tree_t = KDTreeArmadilloAdaptor2<mat, Rnanoflann::euclidean, false>;
-            my_kd_tree_t mat_index(data.n_rows, data, leafs);
-            nn_helper(mat_index, searchParams, points, k, search, radius, parallel, cores, indices, distances);
-        }
-    }
-    else if (method == "euclidean2")
-    {
-        if (square)
-        {
-            using my_kd_tree_t = KDTreeArmadilloAdaptor2<mat, Rnanoflann::euclidean2, true>;
-            my_kd_tree_t mat_index(data.n_rows, data, leafs);
-            nn_helper(mat_index, searchParams, points, k, search, radius, parallel, cores, indices, distances);
-        }
-        else
-        {
-            using my_kd_tree_t = KDTreeArmadilloAdaptor2<mat, Rnanoflann::euclidean2, false>;
             my_kd_tree_t mat_index(data.n_rows, data, leafs);
             nn_helper(mat_index, searchParams, points, k, search, radius, parallel, cores, indices, distances);
         }
@@ -125,8 +141,8 @@ List nn(arma::mat data, arma::mat points, arma::uword k, const std::string metho
     }
     else if (method == "jensen_shannon")
     {
-        using my_kd_tree_t = KDTreeArmadilloAdaptor<mat, Rnanoflann::jensen_shannon>;
-        my_kd_tree_t mat_index(data.n_rows, data, leafs);
+        using my_kd_tree_t = KDTreeArmadilloAdaptor4<mat, Rnanoflann::jensen_shannon>;
+        my_kd_tree_t mat_index(data.n_rows, data, points, leafs);
         nn_helper(mat_index, searchParams, points, k, search, radius, parallel, cores, indices, distances);
     }
     else if (method == "itakura_saito")
