@@ -4,6 +4,8 @@
 #include <RcppArmadillo.h>
 using namespace arma;
 
+typedef double (*Unary_Function)(double); // unary function
+
 template <class RET, class... Args>
 using Mfunction = RET (*)(Args...);
 
@@ -52,4 +54,11 @@ colvec elems(colvec x, colvec y)
 inline bool check_if_is_finite(double x)
 {
 	return x > 0 and !R_IsNA(x);
+}
+
+template<Unary_Function F,typename T1,typename T2>
+void fill_with(T1 start,T1 end,T2 startf){
+    for(;start!=end;++start,++startf){
+        *startf=F(*start);
+    }
 }
