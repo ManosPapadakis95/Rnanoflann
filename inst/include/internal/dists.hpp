@@ -607,7 +607,7 @@ namespace Rnanoflann
             {
                 Col<DistanceType> y(const_cast<T *>(a), size, false);
                 const Col<DistanceType> x = data_source.col(b_idx);
-                return -log(Coeff::bhattacharyya(y, x));
+                return -log(Coeff::bhattacharyya<true>(y, x));
             }
 
             template <typename U, typename V>
@@ -621,6 +621,45 @@ namespace Rnanoflann
         struct traits
         {
             using distance_t = bhattacharyya_adaptor<T, DataSource, T, IndexType>;
+        };
+    };
+
+    struct bhattacharyya2 : public Metric
+    {
+        template <
+            class T, class DataSource, typename _DistanceType = T,
+            typename IndexType = uint32_t>
+        struct bhattacharyya2_adaptor
+        {
+            using ElementType = T;
+            using DistanceType = _DistanceType;
+
+            const DataSource &data_source;
+
+            bhattacharyya2_adaptor(const DataSource &_data_source)
+                : data_source(_data_source)
+            {
+            }
+
+            DistanceType evalMetric(
+                const T *a, const IndexType b_idx, size_t size) const
+            {
+                Col<DistanceType> y = data_source.col_sqrt_y(a);
+                const Col<DistanceType> x = data_source.col_sqrt_x(b_idx);
+                return -log(Coeff::bhattacharyya<false>(y, x));
+            }
+
+            template <typename U, typename V>
+            DistanceType accum_dist(const U a, const V b, const size_t) const
+            {
+                return 0;
+            }
+        };
+
+        template <class T, class DataSource, typename IndexType = uint32_t>
+        struct traits
+        {
+            using distance_t = bhattacharyya2_adaptor<T, DataSource, T, IndexType>;
         };
     };
 
@@ -646,7 +685,7 @@ namespace Rnanoflann
             {
                 Col<DistanceType> y(const_cast<T *>(a), size, false);
                 const Col<DistanceType> x = data_source.col(b_idx);
-                return std::sqrt(2.0 - 2.0 * Coeff::bhattacharyya(y, x));
+                return std::sqrt(2.0 - 2.0 * Coeff::bhattacharyya<true>(y, x));
             }
 
             template <typename U, typename V>

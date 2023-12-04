@@ -13,6 +13,7 @@ using Rnanoflann::KDTreeArmadilloAdaptor;
 using Rnanoflann::KDTreeArmadilloAdaptor2;
 using Rnanoflann::KDTreeArmadilloAdaptor3;
 using Rnanoflann::KDTreeArmadilloAdaptor4;
+using Rnanoflann::KDTreeArmadilloAdaptor5;
 
 template <class T>
 void nn_helper(T &mat_index, SearchParameters &searchParams, arma::mat &points, arma::uword k,
@@ -155,6 +156,12 @@ List nn(arma::mat data, arma::mat points, arma::uword k, const std::string metho
     {
         using my_kd_tree_t = KDTreeArmadilloAdaptor<mat, Rnanoflann::bhattacharyya>;
         my_kd_tree_t mat_index(data.n_rows, data, leafs);
+        nn_helper(mat_index, searchParams, points, k, search, radius, parallel, cores, indices, distances);
+    }
+    else if (method == "bhattacharyya2")
+    {
+        using my_kd_tree_t = KDTreeArmadilloAdaptor5<mat, Rnanoflann::bhattacharyya2>;
+        my_kd_tree_t mat_index(data.n_rows, data, points, leafs);
         nn_helper(mat_index, searchParams, points, k, search, radius, parallel, cores, indices, distances);
     }
     else if (method == "jeffries_matusita")
