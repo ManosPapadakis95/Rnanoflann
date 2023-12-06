@@ -1,4 +1,8 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
-^.RData
-^.Rhistory
+^docs
+^.todo
+^.github
+^.html
+^.gitignore
+^.vscode

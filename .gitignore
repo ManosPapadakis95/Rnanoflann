@@ -1,7 +1,10 @@
-
-*src/.dll
-*src/.o
-*.dll
+*.swp
 *.o
+*.o.tmp
+*\src-i386
+*\src-x64
+*.dll
+*.html
 *.RData
 *.Rhistory
+.Rproj.user

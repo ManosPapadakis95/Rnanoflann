@@ -1,3 +1,4 @@
+%[dont read]
 % System Rd macros
 
 % These macros are automatically loaded whenever R processes an Rd file.
@@ -16,6 +17,7 @@
 
 
 % To get the package author at build time from the DESCRIPTION file
+
 \newcommand{\packagePackage}{\Sexpr[results=rd,stage=build]{utils::packageDescription("#1")[["Package"]]}}
 \newcommand{\packageType}{\Sexpr[results=rd,stage=build]{utils::packageDescription("#1")[["Type"]]}}
 \newcommand{\packageVersion}{\Sexpr[results=rd,stage=build]{utils::packageDescription("#1")[["Version"]]}}
