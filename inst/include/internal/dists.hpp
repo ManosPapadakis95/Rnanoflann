@@ -34,8 +34,7 @@ namespace Rnanoflann
             {
                 Col<DistanceType> y(const_cast<T *>(a), size, false);
                 const Col<DistanceType> x = data_source.col(b_idx);
-                DistanceType result = Dist::euclidean(y, x);
-                return Square ? result : std::sqrt(result);
+                return Square ? Dist::euclidean<false>(y, x) : Dist::euclidean<true>(y, x);
             }
 
             template <typename U, typename V>
@@ -114,8 +113,7 @@ namespace Rnanoflann
             {
                 Col<DistanceType> y(const_cast<T *>(a), size, false);
                 const Col<DistanceType> x = data_source.col(b_idx);
-                DistanceType result = Dist::euclidean(y, x);
-                return Square ? result * 0.5 : std::sqrt(result) * (1.0 / std::sqrt(2.0));
+                return Square ? Dist::euclidean<false>(y, x) * 0.5 : Dist::euclidean<true>(y, x) * (1.0 / std::sqrt(2.0));
             }
 
             template <typename U, typename V>
@@ -607,7 +605,7 @@ namespace Rnanoflann
             {
                 Col<DistanceType> y(const_cast<T *>(a), size, false);
                 const Col<DistanceType> x = data_source.col(b_idx);
-                return -log(Coeff::bhattacharyya(y, x));
+                return -log(Coeff::bhattacharyya<true>(y, x));
             }
 
             template <typename U, typename V>
@@ -646,7 +644,7 @@ namespace Rnanoflann
             {
                 Col<DistanceType> y(const_cast<T *>(a), size, false);
                 const Col<DistanceType> x = data_source.col(b_idx);
-                return std::sqrt(2.0 - 2.0 * Coeff::bhattacharyya(y, x));
+                return std::sqrt(2.0 - 2.0 * Coeff::bhattacharyya<true>(y, x));
             }
 
             template <typename U, typename V>
